@@ -4,7 +4,7 @@ class MessengerBot
 	
 	def self.get_random(id)
 		random_page = WikipediaRestClient.get_random
-		post_page(id,random_page)
+		post_page(id,random_page,true)
 	end
 
 	def self.get_page(id,query)
@@ -16,7 +16,7 @@ class MessengerBot
 		end
 	end
 
-	def self.post_page(id,page)
+	def self.post_page(id,page,is_random = false)
 		begin
 			title = page.title
 			text = page.text
@@ -42,8 +42,12 @@ class MessengerBot
 	        }]
 	        post_template(id,template)
 	    rescue  
-			WikipediaRestClient.set_language("en")
-			get_random(id)
+	    	if is_random then
+				WikipediaRestClient.set_language("en")
+				get_random(id)
+			else
+				say(id,PAGE_NOT_FOUND_MESSAGE["#{@language}"])
+			end
 		end
 	end
 end
