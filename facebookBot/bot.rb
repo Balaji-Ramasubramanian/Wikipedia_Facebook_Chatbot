@@ -64,10 +64,15 @@ class MessengerBot
 
 	# Method that handles messages
 	def self.handle_message(id,message)
+		begin
+			message = message.downcase  # handle only text messages 
+		rescue   
+			message = "hi"
+		end
 		get_profile(id)
 		@language = @locale[0,2]
 		WikipediaRestClient.set_language(@language)
-		message = message.downcase
+		
 		case message
 		when MOST_READ_MESSAGE["#{@language}"].downcase
 			handle_postback(id,"MOST_READ")
