@@ -7,14 +7,16 @@ class MessengerBot
 			today_featured_article = WikipediaRestClient.get_featured_article
 			title = today_featured_article.title
 			url = today_featured_article.url
-			thumbnail_url = today_featured_article.thumbnail_source
+			thumbnail_url = today_featured_article.thumbnail_source if today_featured_article.thumbnail_source
+			thumbnail_url = WIKIPEDIA_LOGO unless  today_featured_article.thumbnail_source
 			text = today_featured_article.text
 		rescue
 			WikipediaRestClient.set_language("en")
 			today_featured_article = WikipediaRestClient.get_featured_article
 			title = today_featured_article.title
 			url = today_featured_article.url
-			thumbnail_url = today_featured_article.thumbnail_source
+			thumbnail_url = today_featured_article.thumbnail_source if today_featured_article.thumbnail_source
+			thumbnail_url = WIKIPEDIA_LOGO unless  today_featured_article.thumbnail_source
 			text = today_featured_article.text
 		end
 		template = GENERIC_TEMPLATE_BODY
