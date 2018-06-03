@@ -27,6 +27,11 @@ class MessengerBot
                 "payload": "IMAGE_OF_THE_DAY"
               },
               {
+                "title": NEWS_MESSAGE["en"],
+                "type": "postback",
+                "payload": "NEWS"
+              },
+              {
                 "title": MOST_READ_MESSAGE["en"],
                 "type": "postback",
                 "payload": "MOST_READ"

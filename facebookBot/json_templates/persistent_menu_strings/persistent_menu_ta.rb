@@ -27,6 +27,11 @@ PERSISTENT_MENU_STRING_TA =
                 "payload": "IMAGE_OF_THE_DAY"
               },
               {
+                "title": NEWS_MESSAGE["ta"],
+                "type": "postback",
+                "payload": "NEWS"
+              },
+              {
                 "title": MOST_READ_MESSAGE["ta"],
                 "type": "postback",
                 "payload": "MOST_READ"

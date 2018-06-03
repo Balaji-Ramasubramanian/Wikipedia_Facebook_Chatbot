@@ -78,9 +78,10 @@ class MessengerBot
 
 
 	def self.get_on_this_day(id)
-			date = Time.now.strftime("%Y/%m/%d")
+		date = Time.now.strftime("%Y/%m/%d")
+		begin
 			on_this_day_content = WikipediaRestClient.get_on_this_day
-		if on_this_day_content.nil?
+		rescue  
 			WikipediaRestClient.set_language("en")
 			on_this_day_content = WikipediaRestClient.get_on_this_day
 		end
@@ -154,6 +155,36 @@ class MessengerBot
 	end
 
 
+	def self.get_news(id)
+		date = Time.now.strftime("%Y/%m/%d")
+		begin
+			news = WikipediaRestClient.get_news
+		rescue  
+			WikipediaRestClient.set_language("en")
+			news = WikipediaRestClient.get_news
+		end
+		template = GENERIC_TEMPLATE_BODY
+		elements = []
+		for i in 0..9 
+			break if i > news.length-1
+
+			text =  news[i]["story"]
+			new_element = {
+		            "title": text,
+		            "buttons":[
+		            	{
+		              		"type": "postback",
+		              		"title": GET_SUMMARY_BUTTON["#{@language}"],
+		              		"payload": "GET_NEWS_SUMMARY_#{i}_#{date}"  # Add date value with the payload
+		            	}
+		            ]
+		    }
+		    elements << new_element		
+		end
+		template[:attachment][:payload][:elements] = elements
+		post_template(id,template)
+	end
+
 
 
 	def self.post_template(id,template)
@@ -172,7 +203,12 @@ class MessengerBot
 		WikipediaRestClient.get_on_this_day(date)
 	end
 
+	def self.get_news_summary
+		WikipediaRestClient.get_news
+	end
+
 	def self.handle_get_summary_postbacks(id,postback)
+
 		if postback.include? "GET_ON_THIS_DAY_SUMMARY"
 			date = postback.split("_")[6] # splits the postback payload and get the date from it.
 			i = postback.split("_")[5].to_i
@@ -180,9 +216,25 @@ class MessengerBot
 			on_this_day_content = get_on_this_day_summary(date)
 		end
 
+
+		if postback.include? "GET_NEWS_SUMMARY"
+			date = postback.split("_")[4]
+			i = postback.split("_")[3].to_i
+			postback = postback.gsub("_#{i}_#{date}","")
+			if date == Time.now.strftime("%Y/%m/%d") then
+				news_contents = get_news_summary
+				news_summary = news_contents[i]["story"]
+			else
+				news_summary = "Couldn't load old news contents"
+			end
+		end
+
+
 		case postback
 		when "GET_ON_THIS_DAY_SUMMARY"
 			say(id,on_this_day_content[i]["text"])
+		when "GET_NEWS_SUMMARY"
+			say(id,news_summary)
 		else
 			say(id, COULDNOT_UNDERSTAND_THAT_MESSAGE["#{@language}"])
 		end

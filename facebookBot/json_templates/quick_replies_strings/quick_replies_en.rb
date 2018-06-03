@@ -18,6 +18,11 @@ QUICK_REPLY_EN = [
 		  	},
 		  	{
 		    	"content_type": 'text',
+		    	"title": QUICK_REPLY_OPTIONS["News"]["en"],
+		    	"payload": 'IMAGE_OF_THE_DAY'
+		  	},
+		  	{
+		    	"content_type": 'text',
 		    	"title": QUICK_REPLY_OPTIONS["On This Day"]["en"],
 		    	"payload": 'ON_THIS_DAY'
 		  	},

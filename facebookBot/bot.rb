@@ -84,6 +84,8 @@ class MessengerBot
 			handle_postback(id, "IMAGE_OF_THE_DAY")
 		when ON_THIS_DAY_MESSAGE["#{@language}"].downcase
 			handle_postback(id,"ON_THIS_DAY")
+		when NEWS_MESSAGE["#{@language}"].downcase
+			handle_postback(id,"NEWS")
 		else
 			handle_wit_response(id,message)
 		end
@@ -120,6 +122,8 @@ class MessengerBot
 			get_today_featured_article(id)
 		when "IMAGE_OF_THE_DAY"
 			get_image_of_the_day(id)
+		when "NEWS"
+			get_news(id)
 		when "MOST_READ"
 			get_most_read(id)
 		when "ON_THIS_DAY"

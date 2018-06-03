@@ -18,6 +18,11 @@ class MessengerBot
 			  	},
 			  	{
 			    	"content_type": 'text',
+			    	"title": QUICK_REPLY_OPTIONS["News"]["ta"],
+			    	"payload": 'IMAGE_OF_THE_DAY'
+			  	},
+			  	{
+			    	"content_type": 'text',
 			    	"title": QUICK_REPLY_OPTIONS["On This Day"]["ta"],
 			    	"payload": 'ON_THIS_DAY'
 			  	},

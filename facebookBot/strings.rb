@@ -30,6 +30,10 @@ class MessengerBot
 		"On This Day" => {
 			"en" => "On This Day",
 			"ta" => "இன்றைய நாளில்"
+		},
+		"News" => {
+			"en" => "News",
+			"ta" => "செய்திகள்" 
 		}
 	}
 
@@ -83,6 +87,10 @@ class MessengerBot
 	IMAGE_OF_THE_DAY_MESSAGE = {
 		"en" => "Image Of The Day",
 		"ta" => "இன்றைய சிறப்பு படம்"
+	}
+	NEWS_MESSAGE = {
+		"en" => "News",
+		"ta" => "செய்திகள்"
 	}
 	RANDOM_ARTICLE_MESSAGE = {
 		"en" => "Random Article",
