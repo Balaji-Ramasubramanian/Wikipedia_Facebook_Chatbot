@@ -83,6 +83,7 @@ class MessengerBot
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
 			on_this_day_content = WikipediaRestClient.get_on_this_day
+			raise 'NilClassException' if on_this_day_content == nil
 		rescue  
 			WikipediaRestClient.set_language("en")
 			on_this_day_content = WikipediaRestClient.get_on_this_day
