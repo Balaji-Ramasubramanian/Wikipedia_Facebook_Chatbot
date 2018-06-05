@@ -130,6 +130,10 @@ class MessengerBot
 			get_on_this_day(id)
 		when "HELP"
 			send_quick_reply(id)
+		when "LANGUAGE_SETTINGS"
+			say(id,"<In Development>")
+		when "SUBSCRIPTION"
+			say(id,"<In Development>")
 		when "HI"
 			say(id,GREETING_MESSAGE["#{@language}"])
 			send_quick_reply(id)
