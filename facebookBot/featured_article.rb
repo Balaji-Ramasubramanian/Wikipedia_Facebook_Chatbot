@@ -117,6 +117,7 @@ class MessengerBot
 	def self.get_most_read(id)
 		begin
 			most_read = WikipediaRestClient.get_most_read
+			raise 'NilClassException' if most_read == nil
 		rescue  
 			WikipediaRestClient.set_language("en")
 			most_read = WikipediaRestClient.get_most_read
@@ -162,6 +163,7 @@ class MessengerBot
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
 			news = WikipediaRestClient.get_news
+			raise 'NilClassException' if news == nil
 		rescue  
 			WikipediaRestClient.set_language("en")
 			news = WikipediaRestClient.get_news
