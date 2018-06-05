@@ -50,7 +50,10 @@ class MessengerBot
 		"en" => "Sorry, I couldn't understand that.",
 		"ta" => "மன்னிக்கவும், எனக்கு புரியவில்லை."
 	}
-
+	COULDNOT_LOAD_OLD_NEWS_TEXT = {
+		"en" => "Sorry, Couldn't load old news",
+		"ta" => "மன்னிக்கவும், பழைய செய்தி கிடைக்கவில்லை"
+	}
 	READ_MORE_BUTTON = {
 		"en" => "Read More",
 		"ta" => "மேலும் வாசிக்க"
@@ -122,10 +125,6 @@ class MessengerBot
  		"ta" => "மேலும்"
  	}
 
- 	BOOKMARK_BUTTON = {
- 		"en" => "Bookmark",
- 		"ta" => "புக்மார்க்"
- 	}
 
  	LANGUAGE_SETTINGS_BUTTON = {
  		"en" => "Language Settings",

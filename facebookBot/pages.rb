@@ -46,7 +46,7 @@ class MessengerBot
 				WikipediaRestClient.set_language("en")
 				get_random(id)
 			else
-				say(id,PAGE_NOT_FOUND_MESSAGE["#{@language}"])
+				say(id,"\"#{query}\" - #{PAGE_NOT_FOUND_MESSAGE["#{@language}"]} ")
 			end
 		end
 	end

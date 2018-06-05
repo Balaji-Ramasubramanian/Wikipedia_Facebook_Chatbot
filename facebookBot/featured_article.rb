@@ -230,7 +230,7 @@ class MessengerBot
 				news_contents = get_news_summary
 				news_summary = news_contents[i]["story"]
 			else
-				news_summary = "Couldn't load old news contents"
+				news_summary = COULDNOT_LOAD_OLD_NEWS_TEXT["#{@language}"]
 			end
 		end
 
