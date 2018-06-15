@@ -25,7 +25,7 @@ class Wit
 			return response["entities"]
 
 		else 
-			return "NOTHING"
+			return "INTENT_NOT_FOUND"
 		end
 
 	end
