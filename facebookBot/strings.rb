@@ -42,15 +42,15 @@ class MessengerBot
 		"en" => "Sorry, There is no article under this name." ,
 		"ta" => "மன்னிக்கவும், அப்படி ஒரு கட்டுரை இல்லை."
 	}
-	MOST_READ_CONTENT_NOT_FOUND_MESSAGE = {
+	NO_MOST_READ_CONTENT_MESSAGE = {
 		"en" => "Sorry, There is no most read contents available right now.",
 		"ta" => "மன்னிக்கவும், இப்போது மிக அதிகமான வாசிப்பு உள்ளடக்கங்கள் இல்லை."
 	}
-	COULDNOT_UNDERSTAND_THAT_MESSAGE = {
+	CANT_UNDERSTAND_MESSAGE = {
 		"en" => "Sorry, I couldn't understand that.",
 		"ta" => "மன்னிக்கவும், எனக்கு புரியவில்லை."
 	}
-	COULDNOT_LOAD_OLD_NEWS_TEXT = {
+	CANT_LOAD_OLD_NEWS_MESSAGE = {
 		"en" => "Sorry, Couldn't load old news",
 		"ta" => "மன்னிக்கவும், பழைய செய்தி கிடைக்கவில்லை"
 	}

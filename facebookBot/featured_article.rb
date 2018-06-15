@@ -154,7 +154,7 @@ class MessengerBot
 			template[:attachment][:payload][:elements] = elements
 			post_template(id,template)
 		else
-			say(id, MOST_READ_CONTENT_NOT_FOUND_MESSAGE["#{@language}"])
+			say(id, NO_MOST_READ_CONTENT_MESSAGE["#{@language}"])
 		end
 	end
 
@@ -230,7 +230,7 @@ class MessengerBot
 				news_contents = get_news_summary
 				news_summary = news_contents[i]["story"]
 			else
-				news_summary = COULDNOT_LOAD_OLD_NEWS_TEXT["#{@language}"]
+				news_summary = CANT_LOAD_OLD_NEWS_MESSAGE["#{@language}"]
 			end
 		end
 
@@ -241,7 +241,7 @@ class MessengerBot
 		when "GET_NEWS_SUMMARY"
 			say(id,news_summary)
 		else
-			say(id, COULDNOT_UNDERSTAND_THAT_MESSAGE["#{@language}"])
+			say(id, CANT_UNDERSTAND_MESSAGE["#{@language}"])
 		end
 	end
 
