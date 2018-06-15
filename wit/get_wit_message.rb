@@ -2,7 +2,7 @@ require 'wit'
 require_relative '../facebookBot/pages'
 class Wit
 
-	#Method to get entities from wit server
+	# Method to get entities from wit server
 	def get_intent(word)
 
 		client = Wit.new(access_token: ENV["WIT_ACCESS_TOKEN"])
