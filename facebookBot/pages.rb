@@ -29,8 +29,8 @@ class MessengerBot
 	            "subtitle": text,
 	            "image_url": thumbnail_url,
 	            "default_action": {
-	        					"type": "web_url",
-	        					"url": url
+	        		"type": "web_url",
+	        		"url": url
 	      		},
 	            "buttons":[
 	            	{
