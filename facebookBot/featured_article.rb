@@ -219,6 +219,7 @@ class MessengerBot
 			i = postback.split("_")[5].to_i
 			postback = postback.gsub("_#{i}_#{date}","")
 			on_this_day_content = get_on_this_day_summary(date)
+			on_this_day_summary = on_this_day_content[i]["text"]
 		end
 
 
@@ -237,7 +238,7 @@ class MessengerBot
 
 		case postback
 		when "GET_ON_THIS_DAY_SUMMARY"
-			say(id,on_this_day_content[i]["text"])
+			say(id,on_this_day_summary)
 		when "GET_NEWS_SUMMARY"
 			say(id,news_summary)
 		else
