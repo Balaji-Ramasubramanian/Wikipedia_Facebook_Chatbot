@@ -25,8 +25,8 @@ class MessengerBot
             "subtitle": text,
             "image_url": thumbnail_url,
             "default_action": {
-        					"type": "web_url",
-        					"url": url
+        		"type": "web_url",
+        		"url": url
       		},
             "buttons":[
             	{
@@ -62,8 +62,8 @@ class MessengerBot
             "subtitle": text,
             "image_url": thumbnail_url,
             "default_action": {
-        					"type": "web_url",
-        					"url": image_commons_page
+        		"type": "web_url",
+        		"url": image_commons_page
       		},
             "buttons":[
             	{
@@ -137,8 +137,8 @@ class MessengerBot
 		            "subtitle": text,
 		            "image_url": thumbnail_url,
 		            "default_action": {
-        					"type": "web_url",
-        					"url": url
+        				"type": "web_url",
+        				"url": url
       				},
 		            "buttons":[
 		            	{
