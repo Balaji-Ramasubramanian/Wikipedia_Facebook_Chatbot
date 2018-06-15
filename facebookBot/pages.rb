@@ -2,11 +2,13 @@ require 'wikipedia_rest_client'
 
 class MessengerBot
 	
+	# To get the random page contents
 	def self.get_random(id)
 		random_page = WikipediaRestClient.get_random
 		post_page(id,random_page,true)
 	end
 
+	# To get the specified page contents
 	def self.get_page(id,query)
 		page = WikipediaRestClient.get_page(query)
 		if page.pageid != nil then
@@ -16,6 +18,7 @@ class MessengerBot
 		end
 	end
 
+	# To send the page contents to the user
 	def self.post_page(id,page,is_random = false)
 		begin
 			title = page.title
