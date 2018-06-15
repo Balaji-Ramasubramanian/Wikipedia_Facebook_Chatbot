@@ -90,7 +90,7 @@ class MessengerBot
 		end
 		template = GENERIC_TEMPLATE_BODY
 		elements = []
-		for i in 0..9 
+		(0..9).each { |i|
 			break if i > on_this_day_content.length-1
 			text =  on_this_day_content[i]["text"]
 			year = on_this_day_content[i]["year"]
@@ -106,7 +106,7 @@ class MessengerBot
 		            ]
 		    }
 		    elements << new_element		
-		end
+		}
 		template[:attachment][:payload][:elements] = elements
 		post_template(id,template)
 	end
@@ -124,7 +124,7 @@ class MessengerBot
 		end
 		template = GENERIC_TEMPLATE_BODY
 		elements = []
-		for i in 0..9 
+		(0..9).each { |i|
 			break unless most_read 
 			break if i > most_read["articles"].length-1
 			title =  most_read["articles"][i]["displaytitle"]
@@ -149,7 +149,7 @@ class MessengerBot
         			] 
 		    }
 		    elements << new_element		
-		end
+		}
 		if elements != nil then
 			template[:attachment][:payload][:elements] = elements
 			post_template(id,template)
@@ -170,7 +170,7 @@ class MessengerBot
 		end
 		template = GENERIC_TEMPLATE_BODY
 		elements = []
-		for i in 0..9 
+		(0..9).each { |i|
 			break if i > news.length-1
 
 			text =  news[i]["story"]
@@ -185,7 +185,7 @@ class MessengerBot
 		            ]
 		    }
 		    elements << new_element		
-		end
+		}
 		template[:attachment][:payload][:elements] = elements
 		post_template(id,template)
 	end
