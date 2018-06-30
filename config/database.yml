@@ -1,7 +1,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: <% ENV["DATABASE"] %>
+  database: <% ENV["DATABASE_NAME"] %>
   pool: 2
   username: <% ENV["DATABASE_USERNAME"] %>
   password: <% ENV["DATABASE_PASSWORD"] %>
@@ -9,7 +9,7 @@ development:
 production:
   adapter: mysql2
   encoding: utf8
- database: <% ENV["DATABASE"] %>
+ database: <% ENV["DATABASE_NAME"] %>
   pool: 2
   username: <% ENV["DATABASE_USERNAME"] %>
   password: <% ENV["DATABASE_PASSWORD"] %>
