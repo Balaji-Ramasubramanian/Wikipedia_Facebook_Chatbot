@@ -9,6 +9,7 @@ require_relative 'json_templates/persistent_menu'
 require_relative 'json_templates/get_started'
 require_relative 'json_templates/template'
 require_relative 'json_templates/quick_replies'
+require_relative '../subscription/subscription'
 require_relative 'strings'
 
 
@@ -28,6 +29,16 @@ class MessengerBot
  		return profile_details
  	end
 
+ 	# Returns language of the user
+ 	def self.get_language(id)
+ 		fb_profile_url = FB_PROFILE + id + FB_PROFILE_FIELDS
+ 		profile_details = HTTParty.get(fb_profile_url)
+ 		locale = profile_details["locale"]
+ 		language = locale[0,2]
+ 		return language
+ 	end
+
+
  	# Method to push a message to Facebook
 	def self.say(recipient_id, text)
 		message_options = {
@@ -35,7 +46,7 @@ class MessengerBot
 			recipient: { id: recipient_id },
 			message: { text: text }
 		}
-		HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_options)
+		res = HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_options.to_json)
 	end
 
 	# To send a quick reply to user
@@ -69,8 +80,7 @@ class MessengerBot
 		rescue   
 			message = "hi"
 		end
-		get_profile(id)
-		@language = @locale[0,2]
+		@language = get_language(id)
 		WikipediaRestClient.set_language(@language)
 		
 		case message
@@ -107,13 +117,12 @@ class MessengerBot
 	# Method that handles postbacks
 	def self.handle_postback(id,postback_payload)
 		typing_on(id)
-		get_profile(id)
-		@language = @locale[0,2]
+		@language = get_language(id)
 		WikipediaRestClient.set_language(@language)
 		case postback_payload
 		when "GET_STARTED"
-			get_profile(id)
 			greeting_message = GREETING_MESSAGE["#{@language}"]
+			SubscriptionClass.new.save_user_profile(id)
 			say(id,greeting_message)
 			send_quick_reply(id)
 		when "RANDOM_ARTICLE"
@@ -133,7 +142,7 @@ class MessengerBot
 		when "LANGUAGE_SETTINGS"
 			say(id,"<In Development>")
 		when "SUBSCRIPTION"
-			say(id,"<In Development>")
+			SubscriptionClass.new.show_subscriptions(id)
 		when "HI"
 			say(id,GREETING_MESSAGE["#{@language}"])
 			send_quick_reply(id)

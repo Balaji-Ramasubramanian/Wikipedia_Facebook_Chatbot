@@ -101,8 +101,8 @@ class MessengerBot
  	}
 
  	SUBSCRIPTION_BUTTON = {
- 		"en" => "Subscription",
- 		"ta" => "சந்தா"
+ 		"en" => "My Subscriptions",
+ 		"ta" => "என் சந்தாக்கள்"
  	}
 
  	SUBSCRIBE_BUTTON = {

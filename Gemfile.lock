@@ -13,6 +13,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    chronic (0.10.2)
     concurrent-ruby (1.0.5)
     dotenv (2.4.0)
     facebook-messenger (1.0.0)
@@ -27,6 +28,7 @@ GEM
     minitest (5.11.3)
     multi_xml (0.6.0)
     mustermann (1.0.2)
+    mysql2 (0.5.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     rack (2.0.5)
@@ -49,6 +51,8 @@ GEM
     tilt (2.0.8)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    whenever (0.10.0)
+      chronic (>= 0.6.3)
     wikipedia_rest_client (0.1.2)
       httparty (~> 0.15.6)
       json (~> 2.0.2)
@@ -64,11 +68,13 @@ DEPENDENCIES
   facebook-messenger
   httparty
   json
+  mysql2
   rake
   sinatra
   sinatra-activerecord
   sinatra-flash
   sinatra-redirect-with-flash
+  whenever
   wikipedia_rest_client
   wit
 
