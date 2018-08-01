@@ -1,4 +1,4 @@
-# Use this file to easily define all of your cron jobs.
+# Use this/webhook file to easily define all of your cron jobs
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
 # http://en.wikipedia.org/wiki/Cron
@@ -18,9 +18,18 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-every 2.minutes do
-	rake "send_featured_article"
-	rake "send_image_of_the_day"
-	rake "send_news"
-	rake "send_on_this_day"
+every 1.day, at: '7:30 am' do
+        rake "send_featured_article"
+end
+
+every 1.day, at: '8:00 am' do
+        rake "send_image_of_the_day"
+end
+
+every 1.day, at: '8:30 am' do
+        rake "send_news"
+end
+
+every 1.day, at: '6:00 am' do
+        rake "send_on_this_day"
 end
