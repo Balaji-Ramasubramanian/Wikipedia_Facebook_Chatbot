@@ -126,9 +126,4 @@ class MessengerBot
  	}
 
 
- 	LANGUAGE_SETTINGS_BUTTON = {
- 		"en" => "Language Settings",
- 		"ta" => "மொழி அமைப்புகள்"
- 	}
-
 end

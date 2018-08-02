@@ -54,11 +54,6 @@ PERSISTENT_MENU_STRING_TA =
                 "payload": "SUBSCRIPTION"
               },
               {
-                "title": LANGUAGE_SETTINGS_BUTTON["ta"],
-                "type": "postback",
-                "payload": "LANGUAGE_SETTINGS"
-              },
-              {
                 "title": HELP_BUTTON["ta"],
                 "type": "postback",
                 "payload": "HELP"

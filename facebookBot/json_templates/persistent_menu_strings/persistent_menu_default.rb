@@ -54,11 +54,6 @@ class MessengerBot
                 "payload": "SUBSCRIPTION"
               },
               {
-                "title": LANGUAGE_SETTINGS_BUTTON["en"],
-                "type": "postback",
-                "payload": "LANGUAGE_SETTINGS"
-              },
-              {
                 "title": HELP_BUTTON["en"],
                 "type": "postback",
                 "payload": "HELP"
