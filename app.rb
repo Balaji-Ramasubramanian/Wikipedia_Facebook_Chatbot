@@ -10,5 +10,5 @@ end
 
 #Show nothing in the browser
 get "/" do
-  "Nothing to see here"
+  "This is the home page for wikipedia facebook chatbot!"
 end
