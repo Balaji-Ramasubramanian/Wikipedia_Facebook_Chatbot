@@ -10,6 +10,7 @@ class RakeTaskClass
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_on_this_day("#{language}")
 			subscribed_users.each do |users|
+				MessengerBot.say(users.facebook_userid,MessengerBot::CHECKOUT_ON_THIS_DAY["#{language}"])
 				MessengerBot.post_template(users.facebook_userid,article)
 			end
 		end

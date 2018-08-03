@@ -125,5 +125,24 @@ class MessengerBot
  		"ta" => "மேலும்"
  	}
 
+ 	CHECKOUT_FEATURED_ARTICLE = {
+ 		"en" => "Check out today's featured article!",
+ 		"ta" => "இன்றைய சிறப்பு கட்டுரை பாருங்கள்!"
+ 	}
+
+ 	CHECKOUT_IMAGE_OF_THE_DAY = {
+ 		"en" => "Check out the image of the day!",
+ 		"ta" => "இன்றைய சிறப்பு படத்தை பாருங்கள்!"
+ 	}
+
+ 	CHECKOUT_NEWS = {
+ 		"en" => "Here are the top news trending today!",
+ 		"ta" => "இன்றைய முன்னணி செய்திகள்!"
+ 	}
+
+ 	CHECKOUT_ON_THIS_DAY = {
+ 		"en" => "Here are the on this day contents!",
+ 		"ta" => "இந்த நாளில் உள்ளடக்கங்கள்!"
+ 	}
 
 end
