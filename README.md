@@ -51,9 +51,15 @@ rake db:migrate
 
 #### Test your project locally
 Download [ngrok](https://ngrok.com) in your local system.
-Navigate to the project folder.
-run `rackup -p <port_number>` inside your project folder.
+
+Open terminal and navigate to the project folder
+
+run `rackup -p <port_number>`.
+
+Open another window in terminal 
+
 run `<path_of_ngrok_file> http <port_number>`
+
 copy the URL with 'https://' prefix. This is your webhook URL that serves your program.
 
 
@@ -76,10 +82,11 @@ I will update the instructions for deploying the app in AWS, Google Cloud and Mi
 - Give a suitable name for you bot and click submit.
 - Click 'set up' in Messenger product. Within the Messenger product, Select the page you want to add this chatbot and setup webhook.
 
-### Add webhook URL to your Facebook App
-In https://developers.facebook.com, Navigate to your app's dashboard and click 'webhook' under products section.
+#### Add webhook URL to your Facebook App
+In [developers.facebook.com](https://developers.facebook.com.), Navigate to your app's dashboard and click 'webhook' under products section.
 Click 'Edit subscription' button and Paste the Webhook URL over there. 
-*Note* Don't forget to append '/webhook' after the URL (since config.ru file mapped to the path '/webhook').
+
+**Note** Don't forget to append '/webhook' after the URL (since config.ru file mapped to the path '/webhook').
 ```
 https://<YOUR_URL>>/webhook
 ```
