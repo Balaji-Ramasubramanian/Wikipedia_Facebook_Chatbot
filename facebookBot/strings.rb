@@ -1,19 +1,19 @@
 # @author Balaji
 class MessengerBot
 
-	# Greeting Text
+	# Greeting Text:
 	GREETING_MESSAGE = {
 		"en" => "Hey!  Welcome to Wikipedia.",
 		"ta" => "வணக்கம்! விக்கிப்பீடியா உங்களை வரவேற்கிறது"
 	}
 
-	# Quick reply header text
+	# Quick reply header text:
 	QUICK_REPLY_HEADER = {
 		"en" => "How can I help you?",
 		"ta" => "நான் உங்களுக்கு ஏவ்வாறு உதவ வேண்டும் "
 	}
 
-	# Quick reply option texts
+	# Quick reply option texts:
 	QUICK_REPLY_OPTIONS = {
 		"Random Article" => {
 			"en" => "Random Article",
