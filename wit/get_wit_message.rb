@@ -1,12 +1,17 @@
 require 'wit'
 require_relative '../facebookBot/pages'
+
+# @author Balaji
 class Wit
 
+	# @param phrase [String] The sentence which has to be processed by Wit.ai.
+	# @return [String] It denotes the entity values from the sentence processed by Wit.
 	# Method to get entities from wit server
-	def get_intent(word)
+	#
+	def get_intent(phrase)
 
 		client = Wit.new(access_token: ENV["WIT_ACCESS_TOKEN"])
-		response = client.message(word)
+		response = client.message(phrase)
 
 		if response["entities"]["intent"] != nil then
 			return response["entities"]["intent"][0]["value"]

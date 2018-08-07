@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Wikipedia_Facebook_Chatbot">Wikipedia_Facebook_Chatbot</h1>
+
+<p>This project is a Facebook Messenger Bot which can be used to fetch
+Wikipedia articles and Featured contents(Article of the day, Image of the
+day, new, On this day) from Wikipedia.</p>
+
+<h2 id="label-Overview">Overview</h2>
+
+<p>This Bot provides the following, - Wikipedia articles - Featured article -
+Image of the day - News - On this day - Most read contents</p>
+
+<h2 id="label-Requirements">Requirements</h2>
+<ul><li>
+<p>Ruby</p>
+</li><li>
+<p>MySQL Database</p>
+</li><li>
+<p>Online hosting server (AWS, Heroku, Google Cloud or any other hosting
+server)</p>
+</li><li>
+<p>Wit Project (For Natural Language Processing)</p>
+</li></ul>
+
+<h2 id="label-Getting+Started">Getting Started</h2>
+
+<p>First, you&#39;ll need to fork and clone this repo</p>
+
+<p>Open Terminal. Change the current working directory to the location where
+you want the cloned directory to be created.</p>
+
+<pre class="code ruby"><code class="ruby">git clone https://github.com/Balaji-Ramasubramanian/Wikipedia_Facebook_Chatbot</code></pre>
+
+<p>Let&#39;s get all our dependencies setup: <code>  bundle install  </code></p>
+
+<h2 id="label-Configuration">Configuration</h2>
+
+<p>You need to change the <strong>.env</strong> file with your appropriate
+access tokens, usernames, and passwords. You need to add the following
+details, - Facebook page access token - Verify token for your Facebook app
+- App secret token - Wit access token - Database Host - Database Name -
+Database Username - Database Password</p>
+
+<h2 id="label-Migrate+Database">Migrate Database</h2>
+
+<p>First, you&#39;ll need to migrate the database tables <code> rake
+db:migrate </code></p>
+
+<h2 id="label-Deploying+your+app-3A">Deploying your app:</h2>
+
+<h4 id="label-Test+your+project+locally">Test your project locally</h4>
+
+<p>Download <a href="https://ngrok.com">ngrok</a> in your local system.</p>
+
+<p>Open terminal and navigate to the project folder</p>
+
+<p>run <code>rackup -p &lt;port_number&gt;</code>.</p>
+
+<p>Open another window in terminal</p>
+
+<p>run <code>&lt;path_of_ngrok_file&gt; http &lt;port_number&gt;</code></p>
+
+<p>copy the URL with &#39;https://&#39; prefix. This is your webhook URL that
+serves your program.</p>
+
+<h4 id="label-Deploying+with+Heroku-3A">Deploying with Heroku:</h4>
+
+<p>You need to have Heroku CLI installed to deploy the bot in Heroku. To find
+more details about Heroku CLI, <a
+href="https://devcenter.heroku.com/articles/heroku-cli">click here</a>.</p>
+
+<p>You can follow <a href="https://devcenter.heroku.com/articles/git">this
+link</a> to setup the Heroku environment for the project.</p>
+
+<p>For this project, you need the following resources in your Heroku project,
+- ClearDB MySQL :: Database - Heroku Scheduler</p>
+
+<p>I will update the instructions for deploying the app in AWS, Google Cloud
+and Microsoft Azure shortly.</p>
+
+<h2 id="label-Create+App+in+Facebook">Create App in Facebook</h2>
+<ul><li>
+<p>Goto <a href="https://developers.facebook.com.">developers.facebook.com</a></p>
+</li><li>
+<p>Login using your Facebook account username and password.</p>
+</li><li>
+<p>Select &#39;Add New App&#39; under &#39;My Apps&#39; section.</p>
+</li><li>
+<p>Give a suitable name for you bot and click submit.</p>
+</li><li>
+<p>Click &#39;set up&#39; in Messenger product. Within the Messenger product,
+Select the page you want to add this chatbot and setup webhook.</p>
+</li></ul>
+
+<h4 id="label-Add+webhook+URL+to+your+Facebook+App">Add webhook URL to your Facebook App</h4>
+
+<p>In <a href="https://developers.facebook.com.">developers.facebook.com</a>,
+Navigate to your app&#39;s dashboard and click &#39;webhook&#39; under
+products section. Click &#39;Edit subscription&#39; button and Paste the
+Webhook URL over there.</p>
+
+<p><strong>Note</strong> Don&#39;t forget to append &#39;/webhook&#39; after
+the URL (since config.ru file mapped to the path &#39;/webhook&#39;).
+<code> https://<YOUR_URL>>/webhook </code> Or you can modify your config.ru
+file in your project to map whatever URL path you want.</p>
+
+<h2 id="label-Contribute">Contribute</h2>
+
+<h4 id="label-Simple+3+step+to+contribute+to+this+repo-3A">Simple 3 step to contribute to this repo:</h4>
+<ol><li>
+<p>Fork the project.</p>
+</li><li>
+<p>Make required changes and commit.</p>
+</li><li>
+<p>Generate a pull request. Mention all the required description regarding the
+changes you have made.</p>
+</li></ol>
+
+<h2 id="label-Author">Author</h2>
+
+<h4 id="label-Balaji+Ramasubramanian">Balaji Ramasubramanian</h4>
+
+<p>If you need any help in customizing and deploying this project, email me @
+balaji030698@gmail.com</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Aug  7 23:30:02 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.0).
+</div>
+
+    </div>
+  </body>
+</html>

@@ -1,14 +1,22 @@
 require 'wikipedia_rest_client'
 
+# @author Balaji
 class MessengerBot
 	
-	# To get the random page contents
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# It used to get the random page contents.
+	#
 	def self.get_random(id)
 		random_page = WikipediaRestClient.get_random
 		post_page(id,random_page,true)
 	end
 
-	# To get the specified page contents
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @param query [String] The search query for Wikipedia Page.
+	# @return [nil]
+	# This method is to get the specified page contents.
+	#
 	def self.get_page(id,query)
 		language = get_language(id)
 		page = WikipediaRestClient.get_page(query)
@@ -19,7 +27,12 @@ class MessengerBot
 		end
 	end
 
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @param page [JSON] The JSON object that holds Page contents (title,text,page URL).
+	# @param is_random [Boolean] It denotes wheater the page is to be posted is either random page or a specified page.
+	# @return [nil]
 	# To send the page contents to the user
+	#
 	def self.post_page(id,page,is_random = false)
 		language = get_language(id)
 		begin

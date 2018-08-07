@@ -7,9 +7,13 @@ require_relative '../facebookBot/strings'
 require_relative './subscription_strings'
 require_relative '../models/user'
 
+# @author Balaji
 class SubscriptionClass
 
-  # To save user subscription information in the database table
+  # @param id [Integer] The receiver's Facebook user ID.
+  # @return [nil]
+  # To save user subscription information in the database table.
+  #
   def save_user_profile(id)
     user = User.find_by_facebook_userid(id)
     if user == nil then
@@ -25,8 +29,10 @@ class SubscriptionClass
     user.save
   end
 
-
+  # @param id [Integer] The receiver's Facebook user ID.
+  # @return [nil]
   # Method to handle subscriptions
+  #
   def show_subscriptions(id)
     language = MessengerBot.get_language(id)
     user = User.find_by_facebook_userid(id)
@@ -83,9 +89,11 @@ class SubscriptionClass
     end
   end
 
-
-
-  # Add subscription for user to Vaccine reminder
+  # @param id [Integer] The receiver's Facebook user ID.
+  # @param category [String] This denotes the category in which the user wants to subscribe.
+  # @return [nil]
+  # This method used to subscribe for daily Featured articles.
+  #
   def subscribe(id,category)
     language = MessengerBot.get_language(id)
     user = User.find_by_facebook_userid(id)
@@ -106,7 +114,11 @@ class SubscriptionClass
     end
   end
 
-  # Unsubscribe a User from Vaccine reminder 
+  # @param id [Integer] The receiver's Facebook user ID.
+  # @param category [String] This denotes the category that the user wants to unsubscribe.
+  # @return [nil]
+  # This method used to unsubscribe from daily Featured articles subscriptions.
+  #
   def unsubscribe(id,category)
     language = MessengerBot.get_language(id)
     user = User.find_by_facebook_userid(id)

@@ -1,0 +1,3028 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: MessengerBot
+  
+    &mdash; Documentation by YARD 0.9.12
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "MessengerBot";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (M)</a> &raquo;
+    
+    
+    <span class="title">MessengerBot</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: MessengerBot
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">MessengerBot</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>facebookBot/featured_article.rb<span class="defines">,<br />
+  facebookBot/bot.rb,<br /> facebookBot/pages.rb</span>
+</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>Balaji</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_image_of_the_day-class_method" title="get_image_of_the_day (class method)">.<strong>get_image_of_the_day</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>It is used to fetch &#39;Image of the day&#39; from Wikipedia and post it
+to the user&#39;s Messenger chat.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_language-class_method" title="get_language (class method)">.<strong>get_language</strong>(id)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is used to get the language of the user set in the Facebook.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_most_read-class_method" title="get_most_read (class method)">.<strong>get_most_read</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method used to get the most_read contents of Wikipedia.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_news-class_method" title="get_news (class method)">.<strong>get_news</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method used to get news contents and post it to user&#39;s Messenger
+chat.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_news_summary-class_method" title="get_news_summary (class method)">.<strong>get_news_summary</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method gets news content summaries from Wikipedia.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_on_this_day-class_method" title="get_on_this_day (class method)">.<strong>get_on_this_day</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The method used to fetch &#39;On this day&#39; contents from Wikipedia.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_on_this_day_summary-class_method" title="get_on_this_day_summary (class method)">.<strong>get_on_this_day_summary</strong>(id, date)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method gets on_this_day contents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_page-class_method" title="get_page (class method)">.<strong>get_page</strong>(id, query)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is to get the specified page contents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_profile-class_method" title="get_profile (class method)">.<strong>get_profile</strong>(id)  &#x21d2; JSON </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is ued to get the user profile information from the Facebook.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_random-class_method" title="get_random (class method)">.<strong>get_random</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>It used to get the random page contents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_today_featured_article-class_method" title="get_today_featured_article (class method)">.<strong>get_today_featured_article</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is used to get featured article of the day content from
+Wikipedia.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_get_summary_postbacks-class_method" title="handle_get_summary_postbacks (class method)">.<strong>handle_get_summary_postbacks</strong>(id, postback)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method handles postbacks for GET_SUMMARY button from on_this_day and
+news contents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_message-class_method" title="handle_message (class method)">.<strong>handle_message</strong>(id, message)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method will handle messages.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_postback-class_method" title="handle_postback (class method)">.<strong>handle_postback</strong>(id, postback_payload)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method handles postbacks.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle_wit_response-class_method" title="handle_wit_response (class method)">.<strong>handle_wit_response</strong>(id, message)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Uses Wit.ai to find the intent of the message.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#post_page-class_method" title="post_page (class method)">.<strong>post_page</strong>(id, page, is_random = false)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>To send the page contents to the user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#post_template-class_method" title="post_template (class method)">.<strong>post_template</strong>(id, template)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method helps to post the MessageCards that contains featured articles
+to user&#39;s Messenger chat.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#say-class_method" title="say (class method)">.<strong>say</strong>(recipient_id, text)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is used to push a text message to a particular user in Facebook
+Messenger.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_quick_reply-class_method" title="send_quick_reply (class method)">.<strong>send_quick_reply</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is used to send a quick reply to the user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#typing_on-class_method" title="typing_on (class method)">.<strong>typing_on</strong>(id)  &#x21d2; nil </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method is used to show the typing indication to the user.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="get_image_of_the_day-class_method">
+  
+    .<strong>get_image_of_the_day</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>It is used to fetch &#39;Image of the day&#39; from Wikipedia and post it
+to the user&#39;s Messenger chat.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_image_of_the_day'>get_image_of_the_day</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_image'>image</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_image_of_the_day'>get_image_of_the_day</span>
+		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail'>thumbnail</span>
+		<span class='id identifier rubyid_image_commons_page'>image_commons_page</span> <span class='op'>=</span> <span class='const'>COMMONS_IMAGE_PAGE_BASE_URL</span> <span class='op'>+</span> <span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_description_text'>description_text</span>
+	<span class='kw'>rescue</span>  
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_image'>image</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_image_of_the_day'>get_image_of_the_day</span>
+		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail'>thumbnail</span>
+		<span class='id identifier rubyid_image_commons_page'>image_commons_page</span> <span class='op'>=</span> <span class='const'>COMMONS_IMAGE_PAGE_BASE_URL</span> <span class='op'>+</span> <span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_description_text'>description_text</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>image_url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_action</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+       		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_image_commons_page'>image_commons_page</span>
+     		<span class='rbrace'>}</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+           	<span class='lbrace'>{</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>VIEW_ON_BROWSER_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_image_commons_page'>image_commons_page</span>
+           	<span class='rbrace'>}</span>
+       	<span class='rbracket'>]</span>      
+       <span class='rbrace'>}</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_language-class_method">
+  
+    .<strong>get_language</strong>(id)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is used to get the language of the user set in the Facebook.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Facebook User ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span> <span class='op'>=</span> <span class='const'>FB_PROFILE</span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>+</span> <span class='const'>FB_PROFILE_FIELDS</span>
+	<span class='id identifier rubyid_profile_details'>profile_details</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_locale'>locale</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
+	<span class='kw'>return</span> <span class='id identifier rubyid_language'>language</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_most_read-class_method">
+  
+    .<strong>get_most_read</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method used to get the most_read contents of Wikipedia.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 133</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_most_read'>get_most_read</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_most_read'>most_read</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_most_read'>get_most_read</span>
+		<span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NilClassException</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_most_read'>most_read</span> <span class='op'>==</span> <span class='kw'>nil</span>
+	<span class='kw'>rescue</span>  
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_most_read'>most_read</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_most_read'>get_most_read</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>9</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+		<span class='kw'>break</span> <span class='kw'>unless</span> <span class='id identifier rubyid_most_read'>most_read</span> 
+		<span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span>
+		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span>  <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>displaytitle</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>extract</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>source</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_urls</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>desktop</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>page</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_new_element'>new_element</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+				<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>image_url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_action</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+       				<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       				<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
+     				<span class='rbrace'>}</span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+	            	<span class='lbrace'>{</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>READ_MORE_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
+	            	<span class='rbrace'>}</span>
+       			<span class='rbracket'>]</span> 
+	    <span class='rbrace'>}</span>
+	    <span class='id identifier rubyid_elements'>elements</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_new_element'>new_element</span>		
+	<span class='rbrace'>}</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_elements'>elements</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>!=</span> <span class='int'>0</span> <span class='kw'>then</span>
+		<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span>
+		<span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+	<span class='kw'>else</span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='const'>NO_MOST_READ_CONTENT_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_news-class_method">
+  
+    .<strong>get_news</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method used to get news contents and post it to user&#39;s Messenger
+chat.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 183</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_news'>get_news</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_date'>date</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y/%m/%d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_news'>news</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_news'>get_news</span>
+		<span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NilClassException</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_news'>news</span> <span class='op'>==</span> <span class='kw'>nil</span>
+	<span class='kw'>rescue</span>  
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_news'>news</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_news'>get_news</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>9</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+		<span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_news'>news</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span>
+
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span>  <span class='id identifier rubyid_news'>news</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>story</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_new_element'>new_element</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+	            	<span class='lbrace'>{</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>GET_SUMMARY_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_NEWS_SUMMARY_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>  <span class='comment'># Add date value with the payload
+</span>	            	<span class='rbrace'>}</span>
+	            <span class='rbracket'>]</span>
+	    <span class='rbrace'>}</span>
+	    <span class='id identifier rubyid_elements'>elements</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_new_element'>new_element</span>		
+	<span class='rbrace'>}</span>
+	<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span>
+	<span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_news_summary-class_method">
+  
+    .<strong>get_news_summary</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method gets news content summaries from Wikipedia.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 253</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_news_summary'>get_news_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_news'>news</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_news'>get_news</span>
+		<span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NilClassException</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_news'>news</span> <span class='op'>==</span> <span class='kw'>nil</span>
+	<span class='kw'>rescue</span>  
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_news'>news</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_news'>get_news</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_news'>news</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_on_this_day-class_method">
+  
+    .<strong>get_on_this_day</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The method used to fetch &#39;On this day&#39; contents from Wikipedia.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_date'>date</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y/%m/%d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span>
+		<span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NilClassException</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>==</span> <span class='kw'>nil</span>
+	<span class='kw'>rescue</span>  
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>9</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+		<span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span>  <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>text</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_year'>year</span> <span class='op'>=</span> <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>year</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_new_element'>new_element</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+				<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>On </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_year'>year</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
+	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+	            	<span class='lbrace'>{</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>GET_SUMMARY_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_ON_THIS_DAY_SUMMARY_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>  <span class='comment'># Add date value with the payload
+</span>	            	<span class='rbrace'>}</span>
+	            <span class='rbracket'>]</span>
+	    <span class='rbrace'>}</span>
+	    <span class='id identifier rubyid_elements'>elements</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_new_element'>new_element</span>		
+	<span class='rbrace'>}</span>
+	<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span>
+	<span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_on_this_day_summary-class_method">
+  
+    .<strong>get_on_this_day_summary</strong>(id, date)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method gets on_this_day contents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>date</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The date for on_this_day content required.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 235</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day_summary'>get_on_this_day_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span><span class='lparen'>(</span><span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span><span class='lparen'>(</span><span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>NilClassException</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>==</span> <span class='kw'>nil</span>
+	<span class='kw'>rescue</span>  
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span><span class='lparen'>(</span><span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_page-class_method">
+  
+    .<strong>get_page</strong>(id, query)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is to get the specified page contents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>query</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The search query for Wikipedia Page.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/pages.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_page'>get_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_page'>page</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_page'>get_page</span><span class='lparen'>(</span><span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_pageid'>pageid</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='kw'>then</span>
+		<span class='id identifier rubyid_post_page'>post_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
+	<span class='kw'>else</span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; - </span><span class='embexpr_beg'>#{</span><span class='const'>PAGE_NOT_FOUND_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_profile-class_method">
+  
+    .<strong>get_profile</strong>(id)  &#x21d2; <tt>JSON</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is ued to get the user profile information from the Facebook.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Facebook User ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>JSON</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A JSON object that contains
+first_name,lastname,profile_pic_url,locale,gender of the user.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_profile'>get_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span> <span class='op'>=</span> <span class='const'>FB_PROFILE</span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>+</span> <span class='const'>FB_PROFILE_FIELDS</span>
+	<span class='id identifier rubyid_profile_details'>profile_details</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span><span class='rparen'>)</span>
+	<span class='ivar'>@first_name</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>first_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='ivar'>@last_name</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>last_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='ivar'>@profile_pic</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>profile_pic</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='ivar'>@locale</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='ivar'>@gender</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gender</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='kw'>return</span> <span class='id identifier rubyid_profile_details'>profile_details</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_random-class_method">
+  
+    .<strong>get_random</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>It used to get the random page contents.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/pages.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_random'>get_random</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_random_page'>random_page</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_random'>get_random</span>
+	<span class='id identifier rubyid_post_page'>post_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_random_page'>random_page</span><span class='comma'>,</span><span class='kw'>true</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get_today_featured_article-class_method">
+  
+    .<strong>get_today_featured_article</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is used to get featured article of the day content from
+Wikipedia</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_today_featured_article'>get_today_featured_article</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_today_featured_article'>today_featured_article</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_featured_article'>get_featured_article</span>
+		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span> <span class='kw'>if</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span>  <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+	<span class='kw'>rescue</span>
+		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_today_featured_article'>today_featured_article</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_featured_article'>get_featured_article</span>
+		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span> <span class='kw'>if</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span>  <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+	<span class='kw'>end</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>image_url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_action</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+       		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
+     		<span class='rbrace'>}</span><span class='comma'>,</span>
+           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+           	<span class='lbrace'>{</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>READ_MORE_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
+           	<span class='rbrace'>}</span>
+       	<span class='rbracket'>]</span>      
+       <span class='rbrace'>}</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_get_summary_postbacks-class_method">
+  
+    .<strong>handle_get_summary_postbacks</strong>(id, postback)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method handles postbacks for GET_SUMMARY button from on_this_day and
+news contents. It also handles subscribe and unsubscribe payloads.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>postback</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>postback payload from Buttons/Menu/MessageCards.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 271</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_handle_get_summary_postbacks'>handle_get_summary_postbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_postback'>postback</span><span class='rparen'>)</span>
+
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+
+	<span class='kw'>if</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_ON_THIS_DAY_SUMMARY</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_date'>date</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>6</span><span class='rbracket'>]</span> <span class='comment'># splits the postback payload and get the date from it.
+</span>		<span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>5</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+		<span class='id identifier rubyid_postback'>postback</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>=</span> <span class='id identifier rubyid_get_on_this_day_summary'>get_on_this_day_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_date'>date</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_on_this_day_summary'>on_this_day_summary</span> <span class='op'>=</span> <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>text</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+	<span class='kw'>end</span>
+
+
+	<span class='kw'>if</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_NEWS_SUMMARY</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_date'>date</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>4</span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_i'>i</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>3</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+		<span class='id identifier rubyid_postback'>postback</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='kw'>if</span> <span class='id identifier rubyid_date'>date</span> <span class='op'>==</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y/%m/%d</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>then</span>
+			<span class='id identifier rubyid_news_contents'>news_contents</span> <span class='op'>=</span> <span class='id identifier rubyid_get_news_summary'>get_news_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_news_summary'>news_summary</span> <span class='op'>=</span> <span class='id identifier rubyid_news_contents'>news_contents</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>story</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='kw'>else</span>
+			<span class='id identifier rubyid_news_summary'>news_summary</span> <span class='op'>=</span> <span class='const'>CANT_LOAD_OLD_NEWS_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+
+
+	<span class='kw'>case</span> <span class='id identifier rubyid_postback'>postback</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_ON_THIS_DAY_SUMMARY</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_on_this_day_summary'>on_this_day_summary</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_NEWS_SUMMARY</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_news_summary'>news_summary</span><span class='rparen'>)</span>
+	<span class='kw'>else</span>
+		<span class='kw'>if</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UNSUBSCRIBE</span><span class='tstring_end'>&quot;</span></span>
+			<span class='id identifier rubyid_category'>category</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UNSUBSCRIBE_</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+			<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_unsubscribe'><span class='object_link'><a href="SubscriptionClass.html#unsubscribe-instance_method" title="SubscriptionClass#unsubscribe (method)">unsubscribe</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span>
+		<span class='kw'>elsif</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIBE</span><span class='tstring_end'>&quot;</span></span>
+			<span class='id identifier rubyid_category'>category</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIBE_</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+			<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_subscribe'><span class='object_link'><a href="SubscriptionClass.html#subscribe-instance_method" title="SubscriptionClass#subscribe (method)">subscribe</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span>
+		<span class='kw'>else</span>
+			<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='const'>CANT_UNDERSTAND_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+		<span class='kw'>end</span>	
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_message-class_method">
+  
+    .<strong>handle_message</strong>(id, message)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method will handle messages.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>This object contains the message content that the user had sent to the
+chatbot.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_handle_message'>handle_message</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_message'>message</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>  <span class='comment'># handle only text messages 
+</span>	<span class='kw'>rescue</span>   
+		<span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hi</span><span class='tstring_end'>&quot;</span></span>
+	<span class='kw'>end</span>
+	<span class='ivar'>@language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='ivar'>@language</span><span class='rparen'>)</span>
+	
+	<span class='kw'>case</span> <span class='id identifier rubyid_message'>message</span>
+	<span class='kw'>when</span> <span class='const'>MOST_READ_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='const'>RANDOM_ARTICLE_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='const'>FEATURED_ARTICLE_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='const'>IMAGE_OF_THE_DAY_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='const'>ON_THIS_DAY_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='const'>NEWS_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NEWS</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>else</span>
+		<span class='id identifier rubyid_handle_wit_response'>handle_wit_response</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_postback-class_method">
+  
+    .<strong>handle_postback</strong>(id, postback_payload)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method handles postbacks.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>postback_payload</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>It contains the payload of Button/MessageCards/Menu.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_postback_payload'>postback_payload</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_typing_on'>typing_on</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='ivar'>@language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='ivar'>@language</span><span class='rparen'>)</span>
+	<span class='kw'>case</span> <span class='id identifier rubyid_postback_payload'>postback_payload</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_STARTED</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_greeting_message'>greeting_message</span> <span class='op'>=</span> <span class='const'>GREETING_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_save_user_profile'><span class='object_link'><a href="SubscriptionClass.html#save_user_profile-instance_method" title="SubscriptionClass#save_user_profile (method)">save_user_profile</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_greeting_message'>greeting_message</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_send_quick_reply'>send_quick_reply</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_get_random'>get_random</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_get_today_featured_article'>get_today_featured_article</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_get_image_of_the_day'>get_image_of_the_day</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NEWS</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_get_news'>get_news</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_get_most_read'>get_most_read</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HELP</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_send_quick_reply'>send_quick_reply</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LANGUAGE_SETTINGS</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;In Development&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIPTION</span><span class='tstring_end'>&quot;</span></span>
+		<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_show_subscriptions'><span class='object_link'><a href="SubscriptionClass.html#show_subscriptions-instance_method" title="SubscriptionClass#show_subscriptions (method)">show_subscriptions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HI</span><span class='tstring_end'>&quot;</span></span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='const'>GREETING_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_send_quick_reply'>send_quick_reply</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>else</span>
+		<span class='id identifier rubyid_handle_get_summary_postbacks'>handle_get_summary_postbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_postback_payload'>postback_payload</span><span class='rparen'>)</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle_wit_response-class_method">
+  
+    .<strong>handle_wit_response</strong>(id, message)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Uses Wit.ai to find the intent of the message</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>message</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>This object contains the message content sent from the
+&#39;handle_message&#39; method.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 128</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_handle_wit_response'>handle_wit_response</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_wit_response'>wit_response</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Wit.html" title="Wit (class)">Wit</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_get_intent'><span class='object_link'><a href="Wit.html#get_intent-instance_method" title="Wit#get_intent (method)">get_intent</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+	<span class='kw'>if</span> <span class='id identifier rubyid_wit_response'>wit_response</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>==</span> <span class='const'>String</span> <span class='kw'>then</span>
+		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_wit_response'>wit_response</span><span class='rparen'>)</span>
+	<span class='kw'>elsif</span> <span class='id identifier rubyid_wit_response'>wit_response</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_PAGE</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='kw'>then</span>
+		<span class='id identifier rubyid_page_name'>page_name</span> <span class='op'>=</span> <span class='id identifier rubyid_wit_response'>wit_response</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_PAGE</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>value</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_get_page'>get_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_page_name'>page_name</span><span class='rparen'>)</span>
+	<span class='kw'>else</span>
+		<span class='id identifier rubyid_get_page'>get_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="post_page-class_method">
+  
+    .<strong>post_page</strong>(id, page, is_random = false)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>To send the page contents to the user</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>page</span>
+      
+      
+        <span class='type'>(<tt>JSON</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The JSON object that holds Page contents (title,text,page URL).</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>is_random</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>It denotes wheater the page is to be posted is either random page or a
+specified page.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/pages.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_post_page'>post_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_page'>page</span><span class='comma'>,</span><span class='id identifier rubyid_is_random'>is_random</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+	<span class='kw'>begin</span>
+		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span> <span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+		<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>image_url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default_action</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+        		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+        		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
+      		<span class='rbrace'>}</span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+            	<span class='lbrace'>{</span>
+              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>READ_MORE_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
+            	<span class='rbrace'>}</span>
+        	<span class='rbracket'>]</span>      
+        <span class='rbrace'>}</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+    <span class='kw'>rescue</span>  
+    	<span class='kw'>if</span> <span class='id identifier rubyid_is_random'>is_random</span> <span class='kw'>then</span>
+			<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_get_random'>get_random</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+		<span class='kw'>else</span>
+			<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; - </span><span class='embexpr_beg'>#{</span><span class='const'>PAGE_NOT_FOUND_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="post_template-class_method">
+  
+    .<strong>post_template</strong>(id, template)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method helps to post the MessageCards that contains featured articles
+to user&#39;s Messenger chat.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>template</span>
+      
+      
+        <span class='type'>(<tt>JSON</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The MessageCard to be posted to user&#39;s Messager chat.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+221
+222
+223
+224
+225
+226
+227
+228</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/featured_article.rb', line 221</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_message_options'>message_options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>messaging_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RESPONSE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>recipient</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_template'>template</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+       <span class='rbrace'>}</span>
+	<span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="say-class_method">
+  
+    .<strong>say</strong>(recipient_id, text)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is used to push a text message to a particular user in Facebook
+Messenger.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>recipient_id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>text</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The text content that has to be sent to the user.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_recipient_id'>recipient_id</span><span class='comma'>,</span> <span class='id identifier rubyid_text'>text</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_message_options'>message_options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+		<span class='label'>messaging_type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RESPONSE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='label'>recipient:</span> <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_recipient_id'>recipient_id</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+		<span class='label'>message:</span> <span class='lbrace'>{</span> <span class='label'>text:</span> <span class='id identifier rubyid_text'>text</span> <span class='rbrace'>}</span>
+	<span class='rbrace'>}</span>
+	<span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_quick_reply-class_method">
+  
+    .<strong>send_quick_reply</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is used to send a quick reply to the user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_send_quick_reply'>send_quick_reply</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_message_options'>message_options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+	<span class='label'>messaging_type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RESPONSE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='label'>recipient:</span> <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='label'>message:</span> <span class='lbrace'>{</span>
+		<span class='label'>text:</span> <span class='const'>QUICK_REPLY_HEADER</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+		<span class='label'>quick_replies:</span> <span class='const'>QUICK_REPLIES</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> 
+	<span class='rbrace'>}</span>
+<span class='rbrace'>}</span>
+	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="typing_on-class_method">
+  
+    .<strong>typing_on</strong>(id)  &#x21d2; <tt>nil</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method is used to show the typing indication to the user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The receiver&#39;s Facebook user ID.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_typing_on'>typing_on</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_message_options'>message_options</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+<span class='label'>messaging_type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RESPONSE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='label'>recipient:</span> <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='label'>sender_action:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>typing_on</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='rbrace'>}</span>
+		<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span><span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>		
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Aug  7 23:30:02 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.12 (ruby-2.4.0).
+</div>
+
+    </div>
+  </body>
+</html>

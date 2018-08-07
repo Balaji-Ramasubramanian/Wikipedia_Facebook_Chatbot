@@ -1,7 +1,13 @@
 require 'wikipedia_rest_client'
 require 'date'
+
+# @author Balaji
 class MessengerBot
 
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# This method is used to get featured article of the day content from Wikipedia
+	#
 	def self.get_today_featured_article(id)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -41,8 +47,10 @@ class MessengerBot
 		post_template(id,template)
 	end
 
-
-
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# It is used to fetch 'Image of the day' from Wikipedia and post it to the user's Messenger chat.
+	#
 	def self.get_image_of_the_day(id)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -80,9 +88,10 @@ class MessengerBot
 		post_template(id,template)
 	end
 
-
-
-
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# The method used to fetch 'On this day' contents from Wikipedia.
+	#
 	def self.get_on_this_day(id)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -117,9 +126,10 @@ class MessengerBot
 		post_template(id,template)
 	end
 
-
-
-
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# This method used to get the most_read contents of Wikipedia.
+	#
 	def self.get_most_read(id)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -166,7 +176,10 @@ class MessengerBot
 		end
 	end
 
-
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# This method used to get news contents and post it to user's Messenger chat.
+	#
 	def self.get_news(id)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -200,8 +213,11 @@ class MessengerBot
 		post_template(id,template)
 	end
 
-
-
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @param template [JSON] The MessageCard to be posted to user's Messager chat.
+	# @return [nil]
+	# This method helps to post the MessageCards that contains featured articles to user's Messenger chat.
+	#
 	def self.post_template(id,template)
 		message_options = {
 		"messaging_type": "RESPONSE",
@@ -211,9 +227,11 @@ class MessengerBot
 		res = HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_options.to_json)
 	end
 
-
-
-
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @param date [String] The date for on_this_day content required.
+	# @return [nil]
+	# This method gets on_this_day contents.
+	#
 	def self.get_on_this_day_summary(id,date)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -228,6 +246,10 @@ class MessengerBot
 		on_this_day_content
 	end
 
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @return [nil]
+	# This method gets news content summaries from Wikipedia.
+	#
 	def self.get_news_summary(id)
 		language = get_language(id)
 		WikipediaRestClient.set_language(language)
@@ -241,6 +263,11 @@ class MessengerBot
 		news
 	end
 
+	# @param id [Integer] The receiver's Facebook user ID.
+	# @param postback [String] postback payload from Buttons/Menu/MessageCards.
+	# @return [nil]
+	# This method handles postbacks for GET_SUMMARY button from on_this_day and news contents. It also handles subscribe and unsubscribe payloads.
+	#
 	def self.handle_get_summary_postbacks(id,postback)
 
 		language = get_language(id)

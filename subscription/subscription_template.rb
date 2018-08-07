@@ -1,5 +1,8 @@
+# @author Balaji
 class SubscriptionClass
-     SUBSCRIPTION_MESSAGE_OPTION = {
+
+    # Subscription options
+    SUBSCRIPTION_MESSAGE_OPTION = {
          "messaging_type": "RESPONSE",
          "recipient": { "id": "0" },
          "message":{
