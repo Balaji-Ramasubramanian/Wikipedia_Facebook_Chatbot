@@ -1,4 +1,4 @@
-require './app'
+require_relative './app'
 require 'facebook/messenger'
 require_relative 'facebookBot/bot'
 require 'rake'
