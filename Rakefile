@@ -14,6 +14,7 @@ require_relative "./rake_tasks_methods/rake_image_of_the_day"
 require_relative "./rake_tasks_methods/rake_news"
 require_relative "./rake_tasks_methods/rake_on_this_day"
 
+# Send Featured article to users
 task :send_featured_article do
 	
 	RakeTaskClass.new.send_featured_article("en")
@@ -21,6 +22,7 @@ task :send_featured_article do
 
 end
 
+# Send Image of the day content to users
 task :send_image_of_the_day do
 
 	RakeTaskClass.new.send_image_of_the_day("en")
@@ -28,11 +30,13 @@ task :send_image_of_the_day do
 
 end
 
+# Send news to users
 task :send_news do
 	RakeTaskClass.new.send_news("en")
 	RakeTaskClass.new.send_news("ta")
 end
 
+# Send On this day contents to users
 task :send_on_this_day do
 	RakeTaskClass.new.send_on_this_day("en")
 	RakeTaskClass.new.send_on_this_day("ta")
