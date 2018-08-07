@@ -1,15 +1,19 @@
+# @author Balaji
 class MessengerBot
 
+	# Greeting Text
 	GREETING_MESSAGE = {
 		"en" => "Hey!  Welcome to Wikipedia.",
 		"ta" => "வணக்கம்! விக்கிப்பீடியா உங்களை வரவேற்கிறது"
 	}
 
+	# Quick reply header text
 	QUICK_REPLY_HEADER = {
 		"en" => "How can I help you?",
 		"ta" => "நான் உங்களுக்கு ஏவ்வாறு உதவ வேண்டும் "
 	}
 
+	# Quick reply option texts
 	QUICK_REPLY_OPTIONS = {
 		"Random Article" => {
 			"en" => "Random Article",
@@ -37,7 +41,7 @@ class MessengerBot
 		}
 	}
 
-
+	# Error message texts:
 	PAGE_NOT_FOUND_MESSAGE = {
 		"en" => "Sorry, There is no article under this name." ,
 		"ta" => "மன்னிக்கவும், அப்படி ஒரு கட்டுரை இல்லை."
@@ -54,6 +58,8 @@ class MessengerBot
 		"en" => "Sorry, Couldn't load old news",
 		"ta" => "மன்னிக்கவும், பழைய செய்தி கிடைக்கவில்லை"
 	}
+
+	# Message Card button texts:
 	READ_MORE_BUTTON = {
 		"en" => "Read More",
 		"ta" => "மேலும் வாசிக்க"
@@ -69,6 +75,7 @@ class MessengerBot
 		"ta" => "நிகழ்ச்சி சுருக்கம்"
 	}
 
+	# Texts used for buttons that are present at persistant menu:
 	FEATURED = {
 		"en" => "Featured",
 		"ta" => "சிறப்பு கட்டுரைகள்"
@@ -100,6 +107,7 @@ class MessengerBot
 		"ta" => "ஏதாவது ஒரு கட்டுரை"
  	}
 
+ 	# Button texts: 
  	SUBSCRIPTION_BUTTON = {
  		"en" => "My Subscriptions",
  		"ta" => "என் சந்தாக்கள்"
@@ -125,6 +133,8 @@ class MessengerBot
  		"ta" => "மேலும்"
  	}
 
+
+ 	# Message texts that are used while sending daily featured contents:
  	CHECKOUT_FEATURED_ARTICLE = {
  		"en" => "Check out today's featured article!",
  		"ta" => "இன்றைய சிறப்பு கட்டுரை பாருங்கள்!"
