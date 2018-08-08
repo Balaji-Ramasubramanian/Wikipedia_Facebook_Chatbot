@@ -89,10 +89,374 @@
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="MessengerBot.html" title="MessengerBot (class)">MessengerBot</a></span>, <span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span>, <span class='object_link'><a href="Wit.html" title="Wit (class)">Wit</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="CreateUser.html" title="CreateUser (class)">CreateUser</a></span>, <span class='object_link'><a href="MessengerBot.html" title="MessengerBot (class)">MessengerBot</a></span>, <span class='object_link'><a href="RakeTaskClass.html" title="RakeTaskClass (class)">RakeTaskClass</a></span>, <span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span>, <span class='object_link'><a href="User.html" title="User (class)">User</a></span>, <span class='object_link'><a href="Wit.html" title="Wit (class)">Wit</a></span>
     
   
 </p>
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="SUBSCRIBED_SUBTITLE_TEXT-constant" class="">SUBSCRIBED_SUBTITLE_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Subtitle texts - subscribed:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscribed  ✔️</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span>	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>குழுசேர்ந்துள்ளீர்கள் ✔️</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBSCRIBED_SUBTITLE_TEXT-constant" class="">UNSUBSCRIBED_SUBTITLE_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Subtitle texts - sunubscribed:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsubscribed ❌</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>குழுவிலக்கப்பட்டுள்ளீர்கள் ❌</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIPTION_TEXT-constant" class="">SUBSCRIPTION_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistent Menu option - Subscription:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Subscriptions</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>என் சந்தாக்கள்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBSCRIBE_BUTTON-constant" class="">UNSUBSCRIBE_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button text - Unsubscribe:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsubscribe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>குழுவிலகல்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIBE_BUTTON-constant" class="">SUBSCRIBE_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button text - Subscribe:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span>  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscribe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>பதிவு</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIBED_FEATURED_ARTICLE_TEXT-constant" class="">SUBSCRIBED_FEATURED_ARTICLE_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after subscription event - Featured Article:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Thank you for subscribing, I&#39;ll send you Featured article daily !</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சந்தாவிற்கு நன்றி, நான் தினசரி சிறப்பு கட்டுரை அனுப்புவேன்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBSCRIBED_FEATURED_ARTICLE_TEXT-constant" class="">UNSUBSCRIBED_FEATURED_ARTICLE_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after unsubscribed event - Featured Article:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are successfully unsubscribed to Featured article! To get Featured article daily, do subscribe!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>நீங்கள் வெற்றிகரமாக குழுவிலக்கப்பட்டுள்ளீர்கள்! தினசரி சிறப்பு கட்டுரை பெற, பதிவு செய்க!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIBED_IMAGE_OF_THE_DAY_TEXT-constant" class="">SUBSCRIBED_IMAGE_OF_THE_DAY_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after subscription event - Image Of The Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Thank you for subscribing, I&#39;ll send you Image of the day daily !</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சந்தாவிற்கு நன்றி, நான் தினசரி இன்றைய சிறப்பு படம் அனுப்புவேன்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBSCRIBED_IMAGE_OF_THE_DAY_TEXT-constant" class="">UNSUBSCRIBED_IMAGE_OF_THE_DAY_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after unsubscribed event - Image Of The Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are successfully unsubscribed to Image of the day! To get Image of the day content daily, do subscribe!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>நீங்கள் வெற்றிகரமாக குழுவிலக்கப்பட்டுள்ளீர்கள்! தினசரி இன்றைய சிறப்பு படம் பெற, பதிவு செய்க!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIBED_NEWS_TEXT-constant" class="">SUBSCRIBED_NEWS_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after subscription event - News:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Thank you for subscribing, I&#39;ll send you Wiki news daily !</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சந்தாவிற்கு நன்றி, நான் தினசரி செய்திகள் அனுப்புவேன்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBSCRIBED_NEWS_TEXT-constant" class="">UNSUBSCRIBED_NEWS_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after unsubscribed event - News:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are successfully unsubscribed to News! To get news daily, do subscribe!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>நீங்கள் வெற்றிகரமாக குழுவிலக்கப்பட்டுள்ளீர்கள்! தினசரி செய்திகள் பெற, பதிவு செய்க!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIBED_ON_THIS_DAY_TEXT-constant" class="">SUBSCRIBED_ON_THIS_DAY_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after subscription event -On This Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Thank you for subscribing, I&#39;ll send you On this day daily !</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சந்தாவிற்கு நன்றி, நான் தினசரி &#39;இன்றைய நாளில் கட்டுரை&#39; அனுப்புவேன்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBSCRIBED_ON_THIS_DAY_TEXT-constant" class="">UNSUBSCRIBED_ON_THIS_DAY_TEXT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Success message after unsubscribed event -On This Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are successfully unsubscribed to On this day! To get On this day articles daily, do subscribe!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>நீங்கள் வெற்றிகரமாக குழுவிலக்கப்பட்டுள்ளீர்கள்! தினசரி &#39;இன்றைய நாளில் கட்டுரை&#39; பெற, பதிவு செய்க!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="FB_PAGE-constant" class="">FB_PAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Facebook page graph API to authenticate to a Facebook Page</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://graph.facebook.com/v2.6/me/messenger_profile?access_token=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FB_ACCESS_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="FB_MESSAGE-constant" class="">FB_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Facebook Message API</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://graph.facebook.com/v2.6/me/messages?access_token=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FB_ACCESS_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="FB_PROFILE-constant" class="">FB_PROFILE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Facebook graph API URL to get user profile</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://graph.facebook.com/v2.6/</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="FB_PROFILE_FIELDS-constant" class="">FB_PROFILE_FIELDS =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Facebook graph API to get profile- fileds to be get.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?fields=first_name,last_name,profile_pic,locale,gender&amp;access_token=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FB_ACCESS_TOKEN</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="HEADER-constant" class="">HEADER =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>JSON header content</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>application/json</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="WIKIPEDIA_LOGO-constant" class="">WIKIPEDIA_LOGO =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Wikipedia Logo Image URL</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/320px-Wikipedia-logo-v2.svg.png</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+      <dt id="COMMONS_IMAGE_PAGE_BASE_URL-constant" class="">COMMONS_IMAGE_PAGE_BASE_URL =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Wikimedia Commons page URL</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://commons.wikimedia.org/wiki/</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+    
+  </dl>
 
 
 
@@ -106,7 +470,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Aug  7 23:30:02 2018 by
+  Generated on Wed Aug  8 15:05:22 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.12 (ruby-2.4.0).
 </div>

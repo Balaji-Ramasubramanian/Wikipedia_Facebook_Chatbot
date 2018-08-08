@@ -1,6 +1,12 @@
+# @author Balaji
+# This class is used for migrating the database table named 'users'
+#
 class CreateUser < ActiveRecord::Migration[5.2]
  
- # Creating new users table
+  # @param [nil]
+  # @return [nil]
+  # Creating new users table.
+  #
   def up
   	create_table :users do |t|
   		t.string :facebook_userid
@@ -12,7 +18,10 @@ class CreateUser < ActiveRecord::Migration[5.2]
   	end
   end
 
+  # @param [nil]
+  # @return [nil]
   # Dropping the table
+  #
   def down
   	drop_table :users
   end

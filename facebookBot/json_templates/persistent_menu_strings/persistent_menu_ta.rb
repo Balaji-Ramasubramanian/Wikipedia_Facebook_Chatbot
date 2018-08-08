@@ -1,8 +1,10 @@
 require_relative '../../strings'
 
+# @author Balaji
 class MessengerBot
 
-PERSISTENT_MENU_STRING_TA =
+  # Persistent menu template - Tamil(ta)
+  PERSISTENT_MENU_STRING_TA =
       {
         "locale": "ta_IN",
          "composer_input_disabled": false,

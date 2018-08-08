@@ -34,7 +34,7 @@ class MessengerBot
  	end
 
  	# @param id [Integer] The Facebook User ID.
- 	# @return language [String] The language that the user had set in his/her Facebook profile.
+ 	# @return [String] The language that the user had set in his/her Facebook profile.
  	# This method is used to get the language of the user set in the Facebook.
  	#
  	def self.get_language(id)

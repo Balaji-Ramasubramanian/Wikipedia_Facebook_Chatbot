@@ -1,6 +1,8 @@
+# @author Balaji
 class MessengerBot
-			
-QUICK_REPLY_EN = [
+	
+	# Quick Reply template - English(en)	
+	QUICK_REPLY_EN = [
 			{
 		    	"content_type": 'text',
 		    	"title": QUICK_REPLY_OPTIONS["Random Article"]["en"],

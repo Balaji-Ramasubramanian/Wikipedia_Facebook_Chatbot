@@ -94,8 +94,8 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>facebookBot/featured_article.rb<span class="defines">,<br />
-  facebookBot/bot.rb,<br /> facebookBot/pages.rb</span>
+    <dd>facebookBot/bot.rb<span class="defines">,<br />
+  facebookBot/pages.rb,<br /> facebookBot/strings.rb,<br /> facebookBot/featured_article.rb,<br /> facebookBot/json_templates/greeting.rb,<br /> facebookBot/json_templates/template.rb,<br /> facebookBot/json_templates/get_started.rb,<br /> facebookBot/json_templates/quick_replies.rb,<br /> facebookBot/json_templates/persistent_menu.rb,<br /> facebookBot/json_templates/quick_replies_strings/quick_replies_en.rb,<br /> facebookBot/json_templates/quick_replies_strings/quick_replies_ta.rb,<br /> facebookBot/json_templates/persistent_menu_strings/persistent_menu_ta.rb,<br /> facebookBot/json_templates/persistent_menu_strings/persistent_menu_default.rb</span>
 </dd>
   </dl>
   
@@ -127,6 +127,919 @@
 </ul>
 
 </div>
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="GREETING_MESSAGE-constant" class="">GREETING_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Greeting Text:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hey!  Welcome to Wikipedia.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>வணக்கம்! விக்கிப்பீடியா உங்களை வரவேற்கிறது</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="QUICK_REPLY_HEADER-constant" class="">QUICK_REPLY_HEADER =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Quick reply header text:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>How can I help you?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>நான் உங்களுக்கு ஏவ்வாறு உதவ வேண்டும் </span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="QUICK_REPLY_OPTIONS-constant" class="">QUICK_REPLY_OPTIONS =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Quick reply option texts:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Random Article</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Random Article</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ஏதாவது ஒரு கட்டுரை</span><span class='tstring_end'>&quot;</span></span>
+	<span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Most Read</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Most Read</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>அதிகம் வாசித்தது</span><span class='tstring_end'>&quot;</span></span>
+	<span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Featured Article</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Featured Article</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சிறப்பு கட்டுரை</span><span class='tstring_end'>&quot;</span></span>
+	<span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Image Of The Day</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Image Of The Day</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய சிறப்பு படம்</span><span class='tstring_end'>&quot;</span></span>
+	<span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>On This Day</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>On This Day</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய நாளில்</span><span class='tstring_end'>&quot;</span></span>
+	<span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>News</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>News</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>செய்திகள்</span><span class='tstring_end'>&quot;</span></span> 
+	<span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="PAGE_NOT_FOUND_MESSAGE-constant" class="">PAGE_NOT_FOUND_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Error message - Page not found texts:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sorry, There is no article under this name.</span><span class='tstring_end'>&quot;</span></span> <span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>மன்னிக்கவும், அப்படி ஒரு கட்டுரை இல்லை.</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="NO_MOST_READ_CONTENT_MESSAGE-constant" class="">NO_MOST_READ_CONTENT_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Error message - most read contents not found texts:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sorry, There is no most read contents available right now.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>மன்னிக்கவும், இப்போது மிக அதிகமான வாசிப்பு உள்ளடக்கங்கள் இல்லை.</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="CANT_UNDERSTAND_MESSAGE-constant" class="">CANT_UNDERSTAND_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Error message - Can&#39;t understand users message texts:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sorry, I couldn&#39;t understand that.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>மன்னிக்கவும், எனக்கு புரியவில்லை.</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="CANT_LOAD_OLD_NEWS_MESSAGE-constant" class="">CANT_LOAD_OLD_NEWS_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Error message - Old News can&#39;t be loaded texts:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Sorry, Couldn&#39;t load old news</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>மன்னிக்கவும், பழைய செய்தி கிடைக்கவில்லை</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="READ_MORE_BUTTON-constant" class="">READ_MORE_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Message Card button texts - Read More:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Read More</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>மேலும் வாசிக்க</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="VIEW_ON_BROWSER_BUTTON-constant" class="">VIEW_ON_BROWSER_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Message Card button texts - View on Browser:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>View on Browser</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>உலாவியில் பார்க்கவும்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="GET_SUMMARY_BUTTON-constant" class="">GET_SUMMARY_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Message Card button texts - Get Summary:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Get Summary</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>நிகழ்ச்சி சுருக்கம்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="FEATURED-constant" class="">FEATURED =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - Featured:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Featured</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சிறப்பு கட்டுரைகள்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="MOST_READ_MESSAGE-constant" class="">MOST_READ_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - Most Read:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Most Read</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>அதிகம் வாசித்தது</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="ON_THIS_DAY_MESSAGE-constant" class="">ON_THIS_DAY_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - On This Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>On This Day</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய நாளில்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="FEATURED_ARTICLE_MESSAGE-constant" class="">FEATURED_ARTICLE_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - Featured Article:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Featured Article</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>சிறப்பு கட்டுரை</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="IMAGE_OF_THE_DAY_MESSAGE-constant" class="">IMAGE_OF_THE_DAY_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - Image Of The Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Image Of The Day</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய சிறப்பு படம்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="NEWS_MESSAGE-constant" class="">NEWS_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - News:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>News</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>செய்திகள்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="RANDOM_ARTICLE_MESSAGE-constant" class="">RANDOM_ARTICLE_MESSAGE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistant menu button texts - Random Article:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Random Article</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ஏதாவது ஒரு கட்டுரை</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIPTION_BUTTON-constant" class="">SUBSCRIPTION_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button texts - Subscription:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>My Subscriptions</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>என் சந்தாக்கள்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="SUBSCRIBE_BUTTON-constant" class="">SUBSCRIBE_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button texts - subscribe:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Subscribe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>பதிவு</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="UNSUBCRIBE_BUTTON-constant" class="">UNSUBCRIBE_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button texts - unsubscribe:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Unsubscribe</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>குழுவிலகல்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="HELP_BUTTON-constant" class="">HELP_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button texts - Help:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Help</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>உதவி</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="MORE_BUTTON-constant" class="">MORE_BUTTON =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button texts - More:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>More</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>மேலும்</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="CHECKOUT_FEATURED_ARTICLE-constant" class="">CHECKOUT_FEATURED_ARTICLE =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Daily Featured contents message texts - Featured Article:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Check out today&#39;s featured article!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய சிறப்பு கட்டுரை பாருங்கள்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="CHECKOUT_IMAGE_OF_THE_DAY-constant" class="">CHECKOUT_IMAGE_OF_THE_DAY =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Daily Featured contents message texts - Image Of The Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Check out the image of the day!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய சிறப்பு படத்தை பாருங்கள்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="CHECKOUT_NEWS-constant" class="">CHECKOUT_NEWS =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Daily Featured contents message texts - News:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Here are the top news trending today!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இன்றைய முன்னணி செய்திகள்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="CHECKOUT_ON_THIS_DAY-constant" class="">CHECKOUT_ON_THIS_DAY =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Daily Featured contents message texts - On This Day:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Here are the on this day contents!</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>இந்த நாளில் உள்ளடக்கங்கள்!</span><span class='tstring_end'>&quot;</span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="GREETING-constant" class="">GREETING =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Greeting message payload</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>greeting</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+			<span class='lbrace'>{</span>
+			<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+			<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>text</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Hey {{user_full_name}}, Welcome to Wikipedia.</span><span class='tstring_end'>&quot;</span></span>
+			<span class='rbrace'>}</span><span class='comma'>,</span>
+			<span class='lbrace'>{</span>
+			<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta_IN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+			<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>text</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>வணக்கம் {{user_full_name}}! விக்கிப்பீடியா உங்களை வரவேற்கிறது</span><span class='tstring_end'>&quot;</span></span>
+			<span class='rbrace'>}</span>
+		<span class='rbracket'>]</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="GENERIC_TEMPLATE_BODY-constant" class="">GENERIC_TEMPLATE_BODY =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Generic template JSON body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attachment</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span><span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>generic</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+       <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>elements</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span><span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span><span class='lbrace'>{</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+          <span class='rbrace'>}</span><span class='rbracket'>]</span>      
+        <span class='rbrace'>}</span><span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="BUTTON_TEMPLATE_BODY-constant" class="">BUTTON_TEMPLATE_BODY =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Button Template JSON body</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>attachment</span><span class='label_end'>&quot;:</span><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span><span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>button</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>text</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+      <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="GET_STARTED-constant" class="">GET_STARTED =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Getting started Button payload</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>get_started</span><span class='label_end'>&quot;:</span><span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_STARTED</span><span class='tstring_end'>&quot;</span></span>
+	<span class='rbrace'>}</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="QUICK_REPLIES-constant" class="">QUICK_REPLIES =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Quick replies menu contents</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_EN-constant" title="MessengerBot::QUICK_REPLY_EN (constant)">QUICK_REPLY_EN</a></span></span><span class='comma'>,</span>
+ 		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span> <span class='op'>=&gt;</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_TA-constant" title="MessengerBot::QUICK_REPLY_TA (constant)">QUICK_REPLY_TA</a></span></span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="PERSISTENT_MENU-constant" class="">PERSISTENT_MENU =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistent menu contents</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>persistent_menu</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+    <span class='const'><span class='object_link'><a href="#PERSISTENT_MENU_STRING_DEFAULT-constant" title="MessengerBot::PERSISTENT_MENU_STRING_DEFAULT (constant)">PERSISTENT_MENU_STRING_DEFAULT</a></span></span><span class='comma'>,</span>
+    <span class='const'><span class='object_link'><a href="#PERSISTENT_MENU_STRING_TA-constant" title="MessengerBot::PERSISTENT_MENU_STRING_TA (constant)">PERSISTENT_MENU_STRING_TA</a></span></span>
+  <span class='rbracket'>]</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="QUICK_REPLY_EN-constant" class="">QUICK_REPLY_EN =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Quick Reply template - English(en)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span>
+<span class='lbrace'>{</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Random Article</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&#39;</span></span>
+ 	<span class='rbrace'>}</span><span class='comma'>,</span>
+ 	<span class='lbrace'>{</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Featured Article</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&#39;</span></span>
+ 	<span class='rbrace'>}</span><span class='comma'>,</span>
+<span class='lbrace'>{</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Image Of The Day</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&#39;</span></span>
+ 	<span class='rbrace'>}</span><span class='comma'>,</span>
+ 	<span class='lbrace'>{</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>News</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&#39;</span></span>
+ 	<span class='rbrace'>}</span><span class='comma'>,</span>
+ 	<span class='lbrace'>{</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>On This Day</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&#39;</span></span>
+ 	<span class='rbrace'>}</span><span class='comma'>,</span>
+ 	<span class='lbrace'>{</span>
+  		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+  		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Most Read</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&#39;</span></span>
+		<span class='rbrace'>}</span>	
+<span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="QUICK_REPLY_TA-constant" class="">QUICK_REPLY_TA =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Quick Reply template - Tamil(ta)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span>
+			<span class='lbrace'>{</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Random Article</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&#39;</span></span>
+  	<span class='rbrace'>}</span><span class='comma'>,</span>
+  	<span class='lbrace'>{</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Featured Article</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&#39;</span></span>
+  	<span class='rbrace'>}</span><span class='comma'>,</span>
+	<span class='lbrace'>{</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Image Of The Day</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&#39;</span></span>
+  	<span class='rbrace'>}</span><span class='comma'>,</span>
+  	<span class='lbrace'>{</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>News</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&#39;</span></span>
+  	<span class='rbrace'>}</span><span class='comma'>,</span>
+  	<span class='lbrace'>{</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>On This Day</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    	<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&#39;</span></span>
+  	<span class='rbrace'>}</span><span class='comma'>,</span>
+  	<span class='lbrace'>{</span>
+   		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+   		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_OPTIONS-constant" title="MessengerBot::QUICK_REPLY_OPTIONS (constant)">QUICK_REPLY_OPTIONS</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Most Read</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+   		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&#39;</span></span>
+ 		<span class='rbrace'>}</span>	
+<span class='rbracket'>]</span></pre></dd>
+    
+      <dt id="PERSISTENT_MENU_STRING_TA-constant" class="">PERSISTENT_MENU_STRING_TA =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistent menu template - Tamil(ta)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta_IN</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>composer_input_disabled</span><span class='label_end'>&quot;:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call_to_actions</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+     <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#RANDOM_ARTICLE_MESSAGE-constant" title="MessengerBot::RANDOM_ARTICLE_MESSAGE (constant)">RANDOM_ARTICLE_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#FEATURED-constant" title="MessengerBot::FEATURED (constant)">FEATURED</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nested</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call_to_actions</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#FEATURED_ARTICLE_MESSAGE-constant" title="MessengerBot::FEATURED_ARTICLE_MESSAGE (constant)">FEATURED_ARTICLE_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#IMAGE_OF_THE_DAY_MESSAGE-constant" title="MessengerBot::IMAGE_OF_THE_DAY_MESSAGE (constant)">IMAGE_OF_THE_DAY_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#NEWS_MESSAGE-constant" title="MessengerBot::NEWS_MESSAGE (constant)">NEWS_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NEWS</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#MOST_READ_MESSAGE-constant" title="MessengerBot::MOST_READ_MESSAGE (constant)">MOST_READ_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#ON_THIS_DAY_MESSAGE-constant" title="MessengerBot::ON_THIS_DAY_MESSAGE (constant)">ON_THIS_DAY_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+
+      <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#MORE_BUTTON-constant" title="MessengerBot::MORE_BUTTON (constant)">MORE_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nested</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call_to_actions</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#SUBSCRIPTION_BUTTON-constant" title="MessengerBot::SUBSCRIPTION_BUTTON (constant)">SUBSCRIPTION_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIPTION</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#HELP_BUTTON-constant" title="MessengerBot::HELP_BUTTON (constant)">HELP_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ta</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HELP</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+      <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='rbracket'>]</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+      <dt id="PERSISTENT_MENU_STRING_DEFAULT-constant" class="">PERSISTENT_MENU_STRING_DEFAULT =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Persistent menu template - Default(English)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>default</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>composer_input_disabled</span><span class='label_end'>&quot;:</span> <span class='kw'>false</span><span class='comma'>,</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call_to_actions</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#RANDOM_ARTICLE_MESSAGE-constant" title="MessengerBot::RANDOM_ARTICLE_MESSAGE (constant)">RANDOM_ARTICLE_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#FEATURED-constant" title="MessengerBot::FEATURED (constant)">FEATURED</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nested</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call_to_actions</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#FEATURED_ARTICLE_MESSAGE-constant" title="MessengerBot::FEATURED_ARTICLE_MESSAGE (constant)">FEATURED_ARTICLE_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#IMAGE_OF_THE_DAY_MESSAGE-constant" title="MessengerBot::IMAGE_OF_THE_DAY_MESSAGE (constant)">IMAGE_OF_THE_DAY_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#NEWS_MESSAGE-constant" title="MessengerBot::NEWS_MESSAGE (constant)">NEWS_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NEWS</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#MOST_READ_MESSAGE-constant" title="MessengerBot::MOST_READ_MESSAGE (constant)">MOST_READ_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#ON_THIS_DAY_MESSAGE-constant" title="MessengerBot::ON_THIS_DAY_MESSAGE (constant)">ON_THIS_DAY_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+
+      <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span><span class='comma'>,</span>
+    <span class='lbrace'>{</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#MORE_BUTTON-constant" title="MessengerBot::MORE_BUTTON (constant)">MORE_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>nested</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>call_to_actions</span><span class='label_end'>&quot;:</span> <span class='lbracket'>[</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#SUBSCRIPTION_BUTTON-constant" title="MessengerBot::SUBSCRIPTION_BUTTON (constant)">SUBSCRIPTION_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIPTION</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span><span class='comma'>,</span>
+        <span class='lbrace'>{</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#HELP_BUTTON-constant" title="MessengerBot::HELP_BUTTON (constant)">HELP_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+          <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HELP</span><span class='tstring_end'>&quot;</span></span>
+        <span class='rbrace'>}</span>
+      <span class='rbracket'>]</span>
+    <span class='rbrace'>}</span>
+  <span class='rbracket'>]</span>
+<span class='rbrace'>}</span></pre></dd>
+    
+  </dl>
+
 
 
 
@@ -169,7 +1082,7 @@ to the user&#39;s Messenger chat.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#get_language-class_method" title="get_language (class method)">.<strong>get_language</strong>(id)  &#x21d2; Object </a>
+      <a href="#get_language-class_method" title="get_language (class method)">.<strong>get_language</strong>(id)  &#x21d2; String </a>
     
 
     
@@ -743,17 +1656,17 @@ to the user&#39;s Messenger chat.</p>
 		<span class='id identifier rubyid_image'>image</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_image_of_the_day'>get_image_of_the_day</span>
 		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
 		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail'>thumbnail</span>
-		<span class='id identifier rubyid_image_commons_page'>image_commons_page</span> <span class='op'>=</span> <span class='const'>COMMONS_IMAGE_PAGE_BASE_URL</span> <span class='op'>+</span> <span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_image_commons_page'>image_commons_page</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#COMMONS_IMAGE_PAGE_BASE_URL-constant" title="COMMONS_IMAGE_PAGE_BASE_URL (constant)">COMMONS_IMAGE_PAGE_BASE_URL</a></span></span> <span class='op'>+</span> <span class='id identifier rubyid_title'>title</span>
 		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_description_text'>description_text</span>
 	<span class='kw'>rescue</span>  
 		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_image'>image</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_image_of_the_day'>get_image_of_the_day</span>
 		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
 		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail'>thumbnail</span>
-		<span class='id identifier rubyid_image_commons_page'>image_commons_page</span> <span class='op'>=</span> <span class='const'>COMMONS_IMAGE_PAGE_BASE_URL</span> <span class='op'>+</span> <span class='id identifier rubyid_title'>title</span>
+		<span class='id identifier rubyid_image_commons_page'>image_commons_page</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#COMMONS_IMAGE_PAGE_BASE_URL-constant" title="COMMONS_IMAGE_PAGE_BASE_URL (constant)">COMMONS_IMAGE_PAGE_BASE_URL</a></span></span> <span class='op'>+</span> <span class='id identifier rubyid_title'>title</span>
 		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_image'>image</span><span class='period'>.</span><span class='id identifier rubyid_description_text'>description_text</span>
 	<span class='kw'>end</span>
-	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GENERIC_TEMPLATE_BODY-constant" title="MessengerBot::GENERIC_TEMPLATE_BODY (constant)">GENERIC_TEMPLATE_BODY</a></span></span>
 	<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span>
            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
@@ -765,7 +1678,7 @@ to the user&#39;s Messenger chat.</p>
            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
            	<span class='lbrace'>{</span>
              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>VIEW_ON_BROWSER_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#VIEW_ON_BROWSER_BUTTON-constant" title="MessengerBot::VIEW_ON_BROWSER_BUTTON (constant)">VIEW_ON_BROWSER_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_image_commons_page'>image_commons_page</span>
            	<span class='rbrace'>}</span>
        	<span class='rbracket'>]</span>      
@@ -780,7 +1693,7 @@ to the user&#39;s Messenger chat.</p>
       <div class="method_details ">
   <h3 class="signature " id="get_language-class_method">
   
-    .<strong>get_language</strong>(id)  &#x21d2; <tt>Object</tt> 
+    .<strong>get_language</strong>(id)  &#x21d2; <tt>String</tt> 
   
 
   
@@ -816,6 +1729,24 @@ to the user&#39;s Messenger chat.</p>
   
 </ul>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The language that the user had set in his/her Facebook profile.</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -835,7 +1766,7 @@ to the user&#39;s Messenger chat.</p>
       <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_language'>get_language</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span> <span class='op'>=</span> <span class='const'>FB_PROFILE</span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>+</span> <span class='const'>FB_PROFILE_FIELDS</span>
+	<span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_PROFILE-constant" title="FB_PROFILE (constant)">FB_PROFILE</a></span></span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>+</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_PROFILE_FIELDS-constant" title="FB_PROFILE_FIELDS (constant)">FB_PROFILE_FIELDS</a></span></span>
 	<span class='id identifier rubyid_profile_details'>profile_details</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span><span class='rparen'>)</span>
 	<span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>locale</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 	<span class='id identifier rubyid_language'>language</span> <span class='op'>=</span> <span class='id identifier rubyid_locale'>locale</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span>
@@ -964,7 +1895,7 @@ to the user&#39;s Messenger chat.</p>
 		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_most_read'>most_read</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_most_read'>get_most_read</span>
 	<span class='kw'>end</span>
-	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GENERIC_TEMPLATE_BODY-constant" title="MessengerBot::GENERIC_TEMPLATE_BODY (constant)">GENERIC_TEMPLATE_BODY</a></span></span>
 	<span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 	<span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>9</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
 		<span class='kw'>break</span> <span class='kw'>unless</span> <span class='id identifier rubyid_most_read'>most_read</span> 
@@ -972,7 +1903,7 @@ to the user&#39;s Messenger chat.</p>
 		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span>  <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>displaytitle</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>extract</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>source</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#WIKIPEDIA_LOGO-constant" title="WIKIPEDIA_LOGO (constant)">WIKIPEDIA_LOGO</a></span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>thumbnail</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_most_read'>most_read</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>articles</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>content_urls</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>desktop</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>page</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='id identifier rubyid_new_element'>new_element</span> <span class='op'>=</span> <span class='lbrace'>{</span>
 				<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
@@ -985,7 +1916,7 @@ to the user&#39;s Messenger chat.</p>
 	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
 	            	<span class='lbrace'>{</span>
 	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>READ_MORE_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#READ_MORE_BUTTON-constant" title="MessengerBot::READ_MORE_BUTTON (constant)">READ_MORE_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
 	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
 	            	<span class='rbrace'>}</span>
        			<span class='rbracket'>]</span> 
@@ -996,7 +1927,7 @@ to the user&#39;s Messenger chat.</p>
 		<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_elements'>elements</span>
 		<span class='id identifier rubyid_post_template'>post_template</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_template'>template</span><span class='rparen'>)</span>
 	<span class='kw'>else</span>
-		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='const'>NO_MOST_READ_CONTENT_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#NO_MOST_READ_CONTENT_MESSAGE-constant" title="MessengerBot::NO_MOST_READ_CONTENT_MESSAGE (constant)">NO_MOST_READ_CONTENT_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
 	<span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1111,7 +2042,7 @@ chat.</p>
 		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_news'>news</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_news'>get_news</span>
 	<span class='kw'>end</span>
-	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GENERIC_TEMPLATE_BODY-constant" title="MessengerBot::GENERIC_TEMPLATE_BODY (constant)">GENERIC_TEMPLATE_BODY</a></span></span>
 	<span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 	<span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>9</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
 		<span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_news'>news</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span>
@@ -1122,7 +2053,7 @@ chat.</p>
 	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
 	            	<span class='lbrace'>{</span>
 	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>GET_SUMMARY_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#GET_SUMMARY_BUTTON-constant" title="MessengerBot::GET_SUMMARY_BUTTON (constant)">GET_SUMMARY_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
 	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_NEWS_SUMMARY_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>  <span class='comment'># Add date value with the payload
 </span>	            	<span class='rbrace'>}</span>
 	            <span class='rbracket'>]</span>
@@ -1336,7 +2267,7 @@ chat.</p>
 		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span> <span class='op'>=</span> <span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_get_on_this_day'>get_on_this_day</span>
 	<span class='kw'>end</span>
-	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GENERIC_TEMPLATE_BODY-constant" title="MessengerBot::GENERIC_TEMPLATE_BODY (constant)">GENERIC_TEMPLATE_BODY</a></span></span>
 	<span class='id identifier rubyid_elements'>elements</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 	<span class='lparen'>(</span><span class='int'>0</span><span class='op'>..</span><span class='int'>9</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
 		<span class='kw'>break</span> <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_on_this_day_content'>on_this_day_content</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='op'>-</span><span class='int'>1</span>
@@ -1348,7 +2279,7 @@ chat.</p>
 	            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
 	            	<span class='lbrace'>{</span>
 	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>postback</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>GET_SUMMARY_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#GET_SUMMARY_BUTTON-constant" title="MessengerBot::GET_SUMMARY_BUTTON (constant)">GET_SUMMARY_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
 	              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>payload</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_ON_THIS_DAY_SUMMARY_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_date'>date</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>  <span class='comment'># Add date value with the payload
 </span>	            	<span class='rbrace'>}</span>
 	            <span class='rbracket'>]</span>
@@ -1567,7 +2498,7 @@ chat.</p>
 	<span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_pageid'>pageid</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='kw'>then</span>
 		<span class='id identifier rubyid_post_page'>post_page</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_page'>page</span><span class='rparen'>)</span>
 	<span class='kw'>else</span>
-		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; - </span><span class='embexpr_beg'>#{</span><span class='const'>PAGE_NOT_FOUND_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; - </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#PAGE_NOT_FOUND_MESSAGE-constant" title="MessengerBot::PAGE_NOT_FOUND_MESSAGE (constant)">PAGE_NOT_FOUND_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 	<span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1655,7 +2586,7 @@ first_name,lastname,profile_pic_url,locale,gender of the user.</p>
       <pre class="code"><span class="info file"># File 'facebookBot/bot.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_get_profile'>get_profile</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-	<span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span> <span class='op'>=</span> <span class='const'>FB_PROFILE</span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>+</span> <span class='const'>FB_PROFILE_FIELDS</span>
+	<span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_PROFILE-constant" title="FB_PROFILE (constant)">FB_PROFILE</a></span></span> <span class='op'>+</span> <span class='id identifier rubyid_id'>id</span> <span class='op'>+</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_PROFILE_FIELDS-constant" title="FB_PROFILE_FIELDS (constant)">FB_PROFILE_FIELDS</a></span></span>
 	<span class='id identifier rubyid_profile_details'>profile_details</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_fb_profile_url'>fb_profile_url</span><span class='rparen'>)</span>
 	<span class='ivar'>@first_name</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>first_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 	<span class='ivar'>@last_name</span> <span class='op'>=</span> <span class='id identifier rubyid_profile_details'>profile_details</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>last_name</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
@@ -1855,7 +2786,7 @@ Wikipedia</p>
 		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
 		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
 		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span> <span class='kw'>if</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
-		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span>  <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#WIKIPEDIA_LOGO-constant" title="WIKIPEDIA_LOGO (constant)">WIKIPEDIA_LOGO</a></span></span> <span class='kw'>unless</span>  <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
 		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
 	<span class='kw'>rescue</span>
 		<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1863,10 +2794,10 @@ Wikipedia</p>
 		<span class='id identifier rubyid_title'>title</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span>
 		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
 		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span> <span class='kw'>if</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
-		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span>  <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#WIKIPEDIA_LOGO-constant" title="WIKIPEDIA_LOGO (constant)">WIKIPEDIA_LOGO</a></span></span> <span class='kw'>unless</span>  <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
 		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_today_featured_article'>today_featured_article</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
 	<span class='kw'>end</span>
-	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+	<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GENERIC_TEMPLATE_BODY-constant" title="MessengerBot::GENERIC_TEMPLATE_BODY (constant)">GENERIC_TEMPLATE_BODY</a></span></span>
 	<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span>
            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
@@ -1878,7 +2809,7 @@ Wikipedia</p>
            <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
            	<span class='lbrace'>{</span>
              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>READ_MORE_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+             		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#READ_MORE_BUTTON-constant" title="MessengerBot::READ_MORE_BUTTON (constant)">READ_MORE_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
            	<span class='rbrace'>}</span>
        	<span class='rbracket'>]</span>      
@@ -2034,7 +2965,7 @@ news contents. It also handles subscribe and unsubscribe payloads.</p>
 			<span class='id identifier rubyid_news_contents'>news_contents</span> <span class='op'>=</span> <span class='id identifier rubyid_get_news_summary'>get_news_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
 			<span class='id identifier rubyid_news_summary'>news_summary</span> <span class='op'>=</span> <span class='id identifier rubyid_news_contents'>news_contents</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>story</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='kw'>else</span>
-			<span class='id identifier rubyid_news_summary'>news_summary</span> <span class='op'>=</span> <span class='const'>CANT_LOAD_OLD_NEWS_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+			<span class='id identifier rubyid_news_summary'>news_summary</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#CANT_LOAD_OLD_NEWS_MESSAGE-constant" title="MessengerBot::CANT_LOAD_OLD_NEWS_MESSAGE (constant)">CANT_LOAD_OLD_NEWS_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='kw'>end</span>
 	<span class='kw'>end</span>
 
@@ -2052,7 +2983,7 @@ news contents. It also handles subscribe and unsubscribe payloads.</p>
 			<span class='id identifier rubyid_category'>category</span> <span class='op'>=</span> <span class='id identifier rubyid_postback'>postback</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIBE_</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 			<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_subscribe'><span class='object_link'><a href="SubscriptionClass.html#subscribe-instance_method" title="SubscriptionClass#subscribe (method)">subscribe</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span>
 		<span class='kw'>else</span>
-			<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='const'>CANT_UNDERSTAND_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#CANT_UNDERSTAND_MESSAGE-constant" title="MessengerBot::CANT_UNDERSTAND_MESSAGE (constant)">CANT_UNDERSTAND_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
 		<span class='kw'>end</span>	
 	<span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -2177,17 +3108,17 @@ chatbot.</p>
 	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='ivar'>@language</span><span class='rparen'>)</span>
 	
 	<span class='kw'>case</span> <span class='id identifier rubyid_message'>message</span>
-	<span class='kw'>when</span> <span class='const'>MOST_READ_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+	<span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#MOST_READ_MESSAGE-constant" title="MessengerBot::MOST_READ_MESSAGE (constant)">MOST_READ_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
 		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>MOST_READ</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='kw'>when</span> <span class='const'>RANDOM_ARTICLE_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+	<span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#RANDOM_ARTICLE_MESSAGE-constant" title="MessengerBot::RANDOM_ARTICLE_MESSAGE (constant)">RANDOM_ARTICLE_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
 		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RANDOM_ARTICLE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='kw'>when</span> <span class='const'>FEATURED_ARTICLE_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+	<span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#FEATURED_ARTICLE_MESSAGE-constant" title="MessengerBot::FEATURED_ARTICLE_MESSAGE (constant)">FEATURED_ARTICLE_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
 		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>FEATURED_ARTICLE</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='kw'>when</span> <span class='const'>IMAGE_OF_THE_DAY_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+	<span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#IMAGE_OF_THE_DAY_MESSAGE-constant" title="MessengerBot::IMAGE_OF_THE_DAY_MESSAGE (constant)">IMAGE_OF_THE_DAY_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
 		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>IMAGE_OF_THE_DAY</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='kw'>when</span> <span class='const'>ON_THIS_DAY_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+	<span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#ON_THIS_DAY_MESSAGE-constant" title="MessengerBot::ON_THIS_DAY_MESSAGE (constant)">ON_THIS_DAY_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
 		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ON_THIS_DAY</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-	<span class='kw'>when</span> <span class='const'>NEWS_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+	<span class='kw'>when</span> <span class='const'><span class='object_link'><a href="#NEWS_MESSAGE-constant" title="MessengerBot::NEWS_MESSAGE (constant)">NEWS_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
 		<span class='id identifier rubyid_handle_postback'>handle_postback</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>NEWS</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 	<span class='kw'>else</span>
 		<span class='id identifier rubyid_handle_wit_response'>handle_wit_response</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -2318,7 +3249,7 @@ chatbot.</p>
 	<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='ivar'>@language</span><span class='rparen'>)</span>
 	<span class='kw'>case</span> <span class='id identifier rubyid_postback_payload'>postback_payload</span>
 	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>GET_STARTED</span><span class='tstring_end'>&quot;</span></span>
-		<span class='id identifier rubyid_greeting_message'>greeting_message</span> <span class='op'>=</span> <span class='const'>GREETING_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+		<span class='id identifier rubyid_greeting_message'>greeting_message</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GREETING_MESSAGE-constant" title="MessengerBot::GREETING_MESSAGE (constant)">GREETING_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
 		<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_save_user_profile'><span class='object_link'><a href="SubscriptionClass.html#save_user_profile-instance_method" title="SubscriptionClass#save_user_profile (method)">save_user_profile</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_greeting_message'>greeting_message</span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_send_quick_reply'>send_quick_reply</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
@@ -2341,7 +3272,7 @@ chatbot.</p>
 	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SUBSCRIPTION</span><span class='tstring_end'>&quot;</span></span>
 		<span class='const'><span class='object_link'><a href="SubscriptionClass.html" title="SubscriptionClass (class)">SubscriptionClass</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='period'>.</span><span class='id identifier rubyid_show_subscriptions'><span class='object_link'><a href="SubscriptionClass.html#show_subscriptions-instance_method" title="SubscriptionClass#show_subscriptions (method)">show_subscriptions</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
 	<span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>HI</span><span class='tstring_end'>&quot;</span></span>
-		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='const'>GREETING_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+		<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='const'><span class='object_link'><a href="#GREETING_MESSAGE-constant" title="MessengerBot::GREETING_MESSAGE (constant)">GREETING_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
 		<span class='id identifier rubyid_send_quick_reply'>send_quick_reply</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
 	<span class='kw'>else</span>
 		<span class='id identifier rubyid_handle_get_summary_postbacks'>handle_get_summary_postbacks</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='id identifier rubyid_postback_payload'>postback_payload</span><span class='rparen'>)</span>
@@ -2599,8 +3530,8 @@ specified page.</p>
 		<span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
 		<span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_url'>url</span>
 		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span> <span class='kw'>if</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
-		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'>WIKIPEDIA_LOGO</span> <span class='kw'>unless</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
-		<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'>GENERIC_TEMPLATE_BODY</span>
+		<span class='id identifier rubyid_thumbnail_url'>thumbnail_url</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#WIKIPEDIA_LOGO-constant" title="WIKIPEDIA_LOGO (constant)">WIKIPEDIA_LOGO</a></span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_page'>page</span><span class='period'>.</span><span class='id identifier rubyid_thumbnail_source'>thumbnail_source</span>
+		<span class='id identifier rubyid_template'>template</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="#GENERIC_TEMPLATE_BODY-constant" title="MessengerBot::GENERIC_TEMPLATE_BODY (constant)">GENERIC_TEMPLATE_BODY</a></span></span>
 		<span class='id identifier rubyid_template'>template</span><span class='lbracket'>[</span><span class='symbol'>:attachment</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:payload</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='symbol'>:elements</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lbrace'>{</span>
             <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span>
             <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>subtitle</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_text'>text</span><span class='comma'>,</span>
@@ -2612,7 +3543,7 @@ specified page.</p>
             <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>buttons</span><span class='label_end'>&quot;:</span><span class='lbracket'>[</span>
             	<span class='lbrace'>{</span>
               		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>type</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>web_url</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
-              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'>READ_MORE_BUTTON</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+              		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>title</span><span class='label_end'>&quot;:</span> <span class='const'><span class='object_link'><a href="#READ_MORE_BUTTON-constant" title="MessengerBot::READ_MORE_BUTTON (constant)">READ_MORE_BUTTON</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
               		<span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>url</span><span class='label_end'>&quot;:</span> <span class='id identifier rubyid_url'>url</span>
             	<span class='rbrace'>}</span>
         	<span class='rbracket'>]</span>      
@@ -2623,7 +3554,7 @@ specified page.</p>
 			<span class='const'>WikipediaRestClient</span><span class='period'>.</span><span class='id identifier rubyid_set_language'>set_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>en</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 			<span class='id identifier rubyid_get_random'>get_random</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
 		<span class='kw'>else</span>
-			<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; - </span><span class='embexpr_beg'>#{</span><span class='const'>PAGE_NOT_FOUND_MESSAGE</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_say'>say</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_query'>query</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; - </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#PAGE_NOT_FOUND_MESSAGE-constant" title="MessengerBot::PAGE_NOT_FOUND_MESSAGE (constant)">PAGE_NOT_FOUND_MESSAGE</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_language'>language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 		<span class='kw'>end</span>
 	<span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -2726,7 +3657,7 @@ to user&#39;s Messenger chat.</p>
        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>recipient</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>message</span><span class='label_end'>&quot;:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_template'>template</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
        <span class='rbrace'>}</span>
-	<span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_MESSAGE-constant" title="FB_MESSAGE (constant)">FB_MESSAGE</a></span></span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#HEADER-constant" title="HEADER (constant)">HEADER</a></span></span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2832,7 +3763,7 @@ Messenger.</p>
 		<span class='label'>recipient:</span> <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_recipient_id'>recipient_id</span> <span class='rbrace'>}</span><span class='comma'>,</span>
 		<span class='label'>message:</span> <span class='lbrace'>{</span> <span class='label'>text:</span> <span class='id identifier rubyid_text'>text</span> <span class='rbrace'>}</span>
 	<span class='rbrace'>}</span>
-	<span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_res'>res</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_MESSAGE-constant" title="FB_MESSAGE (constant)">FB_MESSAGE</a></span></span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#HEADER-constant" title="HEADER (constant)">HEADER</a></span></span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2918,11 +3849,11 @@ Messenger.</p>
 	<span class='label'>messaging_type:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>RESPONSE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 	<span class='label'>recipient:</span> <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='comma'>,</span>
 	<span class='label'>message:</span> <span class='lbrace'>{</span>
-		<span class='label'>text:</span> <span class='const'>QUICK_REPLY_HEADER</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
-		<span class='label'>quick_replies:</span> <span class='const'>QUICK_REPLIES</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> 
+		<span class='label'>text:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLY_HEADER-constant" title="MessengerBot::QUICK_REPLY_HEADER (constant)">QUICK_REPLY_HEADER</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+		<span class='label'>quick_replies:</span> <span class='const'><span class='object_link'><a href="#QUICK_REPLIES-constant" title="MessengerBot::QUICK_REPLIES (constant)">QUICK_REPLIES</a></span></span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@language</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> 
 	<span class='rbrace'>}</span>
 <span class='rbrace'>}</span>
-	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
+	<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_MESSAGE-constant" title="FB_MESSAGE (constant)">FB_MESSAGE</a></span></span><span class='comma'>,</span> <span class='label'>headers:</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#HEADER-constant" title="HEADER (constant)">HEADER</a></span></span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3006,7 +3937,7 @@ Messenger.</p>
 <span class='label'>recipient:</span> <span class='lbrace'>{</span> <span class='label'>id:</span> <span class='id identifier rubyid_id'>id</span> <span class='rbrace'>}</span><span class='comma'>,</span>
 <span class='label'>sender_action:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>typing_on</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
 		<span class='rbrace'>}</span>
-		<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'>FB_MESSAGE</span><span class='comma'>,</span><span class='label'>headers:</span> <span class='const'>HEADER</span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>		
+		<span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='const'>HTTParty</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="top-level-namespace.html#FB_MESSAGE-constant" title="FB_MESSAGE (constant)">FB_MESSAGE</a></span></span><span class='comma'>,</span><span class='label'>headers:</span> <span class='const'><span class='object_link'><a href="top-level-namespace.html#HEADER-constant" title="HEADER (constant)">HEADER</a></span></span><span class='comma'>,</span> <span class='label'>body:</span> <span class='id identifier rubyid_message_options'>message_options</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='rparen'>)</span>		
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -3018,7 +3949,7 @@ Messenger.</p>
 </div>
 
       <div id="footer">
-  Generated on Tue Aug  7 23:30:02 2018 by
+  Generated on Wed Aug  8 15:05:23 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.12 (ruby-2.4.0).
 </div>

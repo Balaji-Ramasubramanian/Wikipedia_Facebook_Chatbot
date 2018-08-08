@@ -3,8 +3,15 @@ require 'wikipedia_rest_client'
 require_relative './template'
 require_relative '../facebookBot/strings'
 
+# @author Balaji
+# This Class used to perform RakeTasks
+#
 class RakeTaskClass
 
+	# @param language [String] It denotes the language code (Eg: en => English, fr => French,etc.,)
+	# @return [nil]
+	# This method is used to send the news contents to the corresponding subscribed users.
+	#
 	def send_news(language)
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND news_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
@@ -18,6 +25,10 @@ class RakeTaskClass
 		end
 	end
 
+	# @param language [String] It denotes the language code (Eg: en => English, fr => French,etc.,)
+	# @return [JSON] This JSON object contains the template contents (title,payload).
+	# This method will be called from send_news method to fetch the news contents from Wikipedia.
+	#
 	def get_news(language)
 		WikipediaRestClient.set_language(language)
 		date = Time.now.strftime("%Y/%m/%d")

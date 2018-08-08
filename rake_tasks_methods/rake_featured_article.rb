@@ -3,8 +3,15 @@ require 'wikipedia_rest_client'
 require_relative './template'
 require_relative '../facebookBot/strings'
 
+# @author Balaji
+# This Class used to perform RakeTasks
+#
 class RakeTaskClass
 	
+	# @param language [String] It denotes the language code (Eg: en => English, fr => French,etc.,)
+	# @return [nil]
+	# This method used to send Featured article to subscribed users
+	#
 	def send_featured_article(language)
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND featured_article_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
@@ -16,7 +23,10 @@ class RakeTaskClass
 		end
 	end
 
-
+	# @param language [String] It denotes the language code (Eg: en => English, fr => French,etc.,)
+	# @return [JSON] A JSON object that contains template contents (title,subtitle,payload).
+	# This method will be called from send_featured_article method to fetch the Featured article contents from Wikipedia.
+	#
 	def get_featured_article(language)
 		WikipediaRestClient.set_language(language)
 		begin

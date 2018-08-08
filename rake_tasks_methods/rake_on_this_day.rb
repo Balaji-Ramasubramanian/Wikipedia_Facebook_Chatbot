@@ -3,8 +3,15 @@ require 'wikipedia_rest_client'
 require_relative './template'
 require_relative '../facebookBot/strings'
 
+# @author Balaji
+# This Class used to perform RakeTasks
+#
 class RakeTaskClass
 
+	# @param language [String] It denotes the language code (Eg: en => English, fr => French,etc.,)
+	# @return [nil]
+	# This method used to send On this day contents to subscribed users.
+	#
 	def send_on_this_day(language)
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND on_this_day_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
@@ -16,7 +23,10 @@ class RakeTaskClass
 		end
 	end
 
-
+	# @param language [String] It denotes the language code (Eg: en => English, fr => French,etc.,)
+	# @return [JSON] This JSON object contains the template contents (title,subtitle,payload).
+	# This method will be called from send_on_this_day method to fetch the On this day contents from Wikipedia.
+	#
 	def get_on_this_day(language)
 		WikipediaRestClient.set_language(language)
 		date = Time.now.strftime("%Y/%m/%d")

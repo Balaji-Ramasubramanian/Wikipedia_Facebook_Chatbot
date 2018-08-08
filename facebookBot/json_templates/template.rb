@@ -1,5 +1,6 @@
+# @author Balaji
 class MessengerBot 
-
+  # Generic template JSON body
   GENERIC_TEMPLATE_BODY = {
     "attachment": {
       "type": "template",
@@ -18,8 +19,9 @@ class MessengerBot
     }
   }
 
- BUTTON_TEMPLATE_BODY = {
-  "attachment":{
+  # Button Template JSON body
+  BUTTON_TEMPLATE_BODY = {
+    "attachment":{
     "type": "",
     "payload":{
         "template_type": "button",

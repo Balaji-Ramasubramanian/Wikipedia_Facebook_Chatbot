@@ -1,4 +1,6 @@
+# @author Balaji
 class MessengerBot
+	# Greeting message payload
 	GREETING = {
 		"greeting": [
 			{
