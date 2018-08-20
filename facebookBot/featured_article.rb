@@ -4,6 +4,17 @@ require 'date'
 # @author Balaji
 class MessengerBot
 
+
+	# @param text [string] The text in which HTML tags need to be removed
+	# @return [string] HTML tag free text
+	# This method is used to remove tags like <i>,<b> from the text
+	#
+	def self.remove_tags(text)
+		text.gsub!("/","")
+		text.gsub!(/<[a-z]*>/,"")
+		return text
+	end
+
 	# @param id [Integer] The receiver's Facebook user ID.
 	# @return [nil]
 	# This method is used to get featured article of the day content from Wikipedia
@@ -28,6 +39,7 @@ class MessengerBot
 			text = today_featured_article.text
 		end
 		template = GENERIC_TEMPLATE_BODY
+		title = remove_tags(title)
 		template[:attachment][:payload][:elements] = [{
             "title": title,
             "subtitle": text,
@@ -69,6 +81,7 @@ class MessengerBot
 			text = image.description_text
 		end
 		template = GENERIC_TEMPLATE_BODY
+		title = remove_tags(title)
 		template[:attachment][:payload][:elements] = [{
             "title": title,
             "subtitle": text,
@@ -145,7 +158,7 @@ class MessengerBot
 		(0..9).each { |i|
 			break unless most_read 
 			break if i > most_read["articles"].length-1
-			title =  most_read["articles"][i]["displaytitle"]
+			title =  remove_tags(most_read["articles"][i]["displaytitle"])
 			text = most_read["articles"][i]["extract"]
 			thumbnail_url = most_read["articles"][i]["thumbnail"]["source"] if most_read["articles"][i]["thumbnail"]
 			thumbnail_url = WIKIPEDIA_LOGO unless most_read["articles"][i]["thumbnail"]
