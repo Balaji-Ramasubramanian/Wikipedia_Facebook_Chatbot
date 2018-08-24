@@ -100,6 +100,7 @@ class MessengerBot
 			message = "hi"
 		end
 		@language = get_language(id)
+		@language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
 		WikipediaRestClient.set_language(@language)
 		
 		case message
@@ -126,7 +127,9 @@ class MessengerBot
 	# Uses Wit.ai to find the intent of the message
 	#
 	def self.handle_wit_response(id,message)
-		wit_response = Wit.new.get_intent(message)
+		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		wit_response = Wit.new.get_intent(message,language)
 		if wit_response.class == String then
 			handle_postback(id,wit_response)
 		elsif wit_response["GET_PAGE"] != nil then
@@ -145,7 +148,9 @@ class MessengerBot
 	def self.handle_postback(id,postback_payload)
 		typing_on(id)
 		@language = get_language(id)
+		@language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
 		WikipediaRestClient.set_language(@language)
+
 		case postback_payload
 		when "GET_STARTED"
 			greeting_message = GREETING_MESSAGE["#{@language}"]
@@ -166,8 +171,6 @@ class MessengerBot
 			get_on_this_day(id)
 		when "HELP"
 			send_quick_reply(id)
-		when "LANGUAGE_SETTINGS"
-			say(id,"<In Development>")
 		when "SUBSCRIPTION"
 			SubscriptionClass.new.show_subscriptions(id)
 		when "HI"

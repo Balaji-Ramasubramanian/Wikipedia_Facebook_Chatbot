@@ -1,6 +1,8 @@
 # @author Balaji
 class MessengerBot
 
+	# Supported Languages
+	SUPPORTED_LANGUAGE = ["en", "ta"]
 	# Greeting Text:
 	GREETING_MESSAGE = {
 		"en" => "Hey!  Welcome to Wikipedia.",

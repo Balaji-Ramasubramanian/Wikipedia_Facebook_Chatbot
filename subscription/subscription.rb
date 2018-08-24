@@ -35,6 +35,7 @@ class SubscriptionClass
   #
   def show_subscriptions(id)
     language = MessengerBot.get_language(id)
+    language = "en" unless MessengerBot::SUPPORTED_LANGUAGE.include?(language)
     user = User.find_by_facebook_userid(id)
     if user != nil then
 
@@ -96,6 +97,7 @@ class SubscriptionClass
   #
   def subscribe(id,category)
     language = MessengerBot.get_language(id)
+    language = "en" unless MessengerBot::SUPPORTED_LANGUAGE.include?(language)
     user = User.find_by_facebook_userid(id)
     puts "inside subscribe #{category}"
     case category
@@ -121,6 +123,7 @@ class SubscriptionClass
   #
   def unsubscribe(id,category)
     language = MessengerBot.get_language(id)
+    language = "en" unless MessengerBot::SUPPORTED_LANGUAGE.include?(language)
     user = User.find_by_facebook_userid(id)
     puts "inside unsubscribe #{category}"
     case category

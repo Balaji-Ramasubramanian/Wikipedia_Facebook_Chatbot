@@ -21,6 +21,7 @@ class MessengerBot
 	#
 	def self.get_today_featured_article(id)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(language)
 		begin
 			today_featured_article = WikipediaRestClient.get_featured_article
@@ -65,6 +66,7 @@ class MessengerBot
 	#
 	def self.get_image_of_the_day(id)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(language)
 		begin
 			image = WikipediaRestClient.get_image_of_the_day
@@ -107,6 +109,7 @@ class MessengerBot
 	#
 	def self.get_on_this_day(id)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(language)
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
@@ -145,6 +148,7 @@ class MessengerBot
 	#
 	def self.get_most_read(id)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(language)
 		begin
 			most_read = WikipediaRestClient.get_most_read
@@ -195,6 +199,7 @@ class MessengerBot
 	#
 	def self.get_news(id)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(language)
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
@@ -247,6 +252,7 @@ class MessengerBot
 	#
 	def self.get_on_this_day_summary(id,date)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(language)
 		WikipediaRestClient.get_on_this_day(date)
 		begin
@@ -284,7 +290,7 @@ class MessengerBot
 	def self.handle_get_summary_postbacks(id,postback)
 
 		language = get_language(id)
-
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		if postback.include? "GET_ON_THIS_DAY_SUMMARY"
 			date = postback.split("_")[6] # splits the postback payload and get the date from it.
 			i = postback.split("_")[5].to_i

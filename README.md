@@ -16,7 +16,7 @@ This bot is developed to support multiple languages. Currently, It is trained in
 
 The bot will fetch the user's language preference from their phone and Facebook account's language settings option. If the user has un-supported language, then English will be used.
 
-[Wit](https://wit.ai) is used as an NLP agent to handle user's messages. To train our bot in more languages we need to train the Wit model and add the access token of it in .env file.
+[Wit.ai](https://wit.ai) is used as an NLP agent to handle user's messages. To train our bot in more languages we need to train the Wit.ai models and add the access tokens in .env file.
 
 ## Requirements
 - Ruby
@@ -99,7 +99,7 @@ https://<YOUR_URL>>/webhook
 ```
 Or you can modify your config.ru file in your project to map whatever URL path you want.
 
-## How a User can use the bot?
+## How a user can use the bot?
 ### Test the app during the development phase
 During the development phase, only the admins of the bot and the test users who are added by the admins are able to use the bot.
 Admins of the chatbot can add more Facebook users and also add test users through their app's dashboard.

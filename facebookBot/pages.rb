@@ -19,6 +19,7 @@ class MessengerBot
 	#
 	def self.get_page(id,query)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		page = WikipediaRestClient.get_page(query)
 		if page.pageid != nil then
 			post_page(id,page)
@@ -35,6 +36,7 @@ class MessengerBot
 	#
 	def self.post_page(id,page,is_random = false)
 		language = get_language(id)
+		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		begin
 			title = page.title
 			text = page.text
