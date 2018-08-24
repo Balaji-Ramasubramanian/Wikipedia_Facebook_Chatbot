@@ -11,6 +11,10 @@ This Bot provides the following,
 - On this day
 - Most read contents
 
+## Multi-language support
+This bot is developed to support multiple languages. Currently, It is trained in English and Tamil. We can train the bot in other languages as well in the future.
+The bot will fetch the user's language preference from their phone and Facebook account's language settings option. If the user has un-supported language, then English will be used.
+
 ## Requirements
 - Ruby
 - MySQL Database
@@ -91,6 +95,26 @@ Click 'Edit subscription' button and Paste the Webhook URL over there.
 https://<YOUR_URL>>/webhook
 ```
 Or you can modify your config.ru file in your project to map whatever URL path you want.
+
+## How a User can use the bot?
+### Test the app during the development phase
+During the development phase, only the admins of the bot and the test users who are added by the admins are able to use the bot.
+Admins of the chatbot can add more Facebook users and also add test users through their app's dashboard.
+
+##### Add new roles to the bot
+To add new roles, Navigate to the app's dashboard on [Facebook developer's page](https://developers.facebook.com/apps/1812783848743868/roles/roles/).
+Click on Roles -> Roles.
+In this page, we can add Facebook users to any one of the roles of admin/developer/tester/analytic user.
+
+##### Add test users
+Test Users are temporary Facebook accounts that you can create to test various features of your app.
+To add test users for your app, Navigate to Roles -> Test Users and click on add/edit test user accounts.
+
+### Use after publishing the app to the public
+To publish the chatbot to the public first we need to submit our app for Facebook review.
+To do that, click on App Review -> start a submission.
+
+After publishing the app publicly, any Facebook users can access it by directly sending messages to the corresponding Facebook page that hosts the chatbot.
 
 ## Contribute
 #### Simple 3 step to contribute to this repo:
