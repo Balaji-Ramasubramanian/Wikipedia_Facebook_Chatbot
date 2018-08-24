@@ -13,7 +13,10 @@ This Bot provides the following,
 
 ## Multi-language support
 This bot is developed to support multiple languages. Currently, It is trained in English and Tamil. We can train the bot in other languages as well in the future.
+
 The bot will fetch the user's language preference from their phone and Facebook account's language settings option. If the user has un-supported language, then English will be used.
+
+[Wit](https://wit.ai) is used as an NLP agent to handle user's messages. To train our bot in more languages we need to train the Wit model and add the access token of it in .env file.
 
 ## Requirements
 - Ruby
@@ -101,12 +104,12 @@ Or you can modify your config.ru file in your project to map whatever URL path y
 During the development phase, only the admins of the bot and the test users who are added by the admins are able to use the bot.
 Admins of the chatbot can add more Facebook users and also add test users through their app's dashboard.
 
-##### Add new roles to the bot
+#### Add new roles to the bot
 To add new roles, Navigate to the app's dashboard on [Facebook developer's page](https://developers.facebook.com/apps/1812783848743868/roles/roles/).
 Click on Roles -> Roles.
 In this page, we can add Facebook users to any one of the roles of admin/developer/tester/analytic user.
 
-##### Add test users
+#### Add test users
 Test Users are temporary Facebook accounts that you can create to test various features of your app.
 To add test users for your app, Navigate to Roles -> Test Users and click on add/edit test user accounts.
 
