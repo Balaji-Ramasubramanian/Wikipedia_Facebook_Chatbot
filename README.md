@@ -14,7 +14,7 @@ This Bot provides the following features,
 - Most read contents in Wikipedia
 
 ## How a user can use the bot?
-> **Note:** This chatbot is currently in development phase, So before start using this chatbot, you need to be in the testers list of this bot. Just send an E-mail to [balaji030698@gmail.com](balaji030698@gmail.com) with your Facebook profile URL, I will add you to the testers list. You will get an invite notification through Facebook. After accepting the invitation, You can start using this bot.
+> **Note:** This chatbot is currently in development phase, So before start using this chatbot, you need to be in the testers list of this bot. Just send an E-mail to balaji030698@gmail.com with your Facebook profile URL, I will add you to the testers list. You will get an invite notification through Facebook. After accepting the invitation, You can start using this bot.
 
 > Once the chatbot is published, Every Facebook user can access it without requesting for the test user access.
 
