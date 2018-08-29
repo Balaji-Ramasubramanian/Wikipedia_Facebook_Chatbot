@@ -5,14 +5,14 @@ class MessengerBot
 	SUPPORTED_LANGUAGE = ["en", "ta"]
 	# Greeting Text:
 	GREETING_MESSAGE = {
-		"en" => "Hey!  Welcome to Wikipedia.",
-		"ta" => "வணக்கம்! விக்கிப்பீடியா உங்களை வரவேற்கிறது"
+		"en" => "Hey! I am Wikipedia bot. Ask me to fetch a particular Wikipedia article or random article.",
+		"ta" => "வணக்கம்! விக்கிப்பீடியா உங்களை வரவேற்கிறது. ஒரு குறிப்பிட்ட விக்கிப்பீடியா கட்டுரை அல்லது பரிந்துரைப்பு கட்டுரை ஒன்றை பெற நான் உதவுவேன்."
 	}
 
 	# Quick reply header text:
 	QUICK_REPLY_HEADER = {
 		"en" => "How can I help you?",
-		"ta" => "நான் உங்களுக்கு ஏவ்வாறு உதவ வேண்டும் "
+		"ta" => "நான் உங்களுக்கு ஏவ்வாறு உதவ வேண்டும்?"
 	}
 
 	# Quick reply option texts:
