@@ -1,5 +1,5 @@
 # Wikipedia_Facebook_Chatbot
-This project is a Facebook Messenger Bot which can be used to fetch Wikipedia articles and Featured contents(Article of the day, Image of the day, new, On this day) from Wikipedia.
+This project is a Facebook Messenger Bot which can be used to fetch Wikipedia articles and Featured contents(Article of the day, Image of the day, news, On this day) from Wikipedia.
 
 You can see the bot in action in this [video](https://youtu.be/fTAFlR1UbQw).
 
@@ -20,7 +20,8 @@ This Bot provides the following features,
 
 The chatbot is currently deployed in the page https://www.facebook.com/wikipediatestbot. 
 
-- Open the chat window and click on the *GET STARTED* button to start the conversation.
+- Open the url https://www.facebook.com/wikipediatestbot.
+- Click on the *GET STARTED* button to start the conversation.
 - You can use the menu present in the chat to send messages quickly.
 - Once you started your conversation, You will be added to bot's subscriber list. 
 - The subscribed users will be getting the notification messages with featured contents of Wikipedia such as Article of the day, Image of the day, News and On this day.
@@ -138,11 +139,11 @@ In this page, we can add Facebook users to any one of the roles of admin/develop
 Test Users are temporary Facebook accounts that you can create to test various features of your app.
 To add test users for your app, Navigate to Roles -> Test Users and click on add/edit test user accounts.
 
-## Publishing the app to the public
-To publish the chatbot to the public first we need to submit our app for Facebook review.
+## Publishing the app
+To publish the chatbot, we need to submit our app for Facebook review.
 To do that, click on App Review -> start a submission.
 
-After publishing the app publicly, any Facebook users can access it by directly sending messages to the corresponding Facebook page that hosts the chatbot.
+After publishing the app, any Facebook users can access it by directly sending messages to the corresponding Facebook page that hosts the chatbot.
 
 ## Contribute
 #### Simple 3 step to contribute to this repo:
