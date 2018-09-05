@@ -131,7 +131,7 @@ During the development phase, only the admins of the bot and the test users who 
 Admins of the chatbot can add more Facebook users and also add test users through their app's dashboard.
 
 #### Add new roles to the bot
-To add new roles, Navigate to the app's dashboard on [Facebook developer's page](https://developers.facebook.com/apps/1812783848743868/roles/roles/).
+To add new roles, Navigate to the app's dashboard on [Facebook developer's page](https://developers.facebook.com/apps/).
 Click on Roles -> Roles.
 In this page, we can add Facebook users to any one of the roles of admin/developer/tester/analytic user.
 
