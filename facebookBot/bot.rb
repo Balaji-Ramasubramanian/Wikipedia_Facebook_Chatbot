@@ -20,7 +20,7 @@ class MessengerBot
 
 	# @param id [Integer] The Facebook User ID.
 	# @return [JSON]A JSON object that contains first_name,lastname,profile_pic_url,locale,gender of the user.
-	# This method is ued to get the user profile information from the Facebook.
+	# This method is used to get the user profile information from the Facebook.
 	#
 	def self.get_profile(id)
  		fb_profile_url = FB_PROFILE + id + FB_PROFILE_FIELDS
@@ -183,7 +183,8 @@ class MessengerBot
 
 
 	# Initial configuration for the bot 
-	Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["FB_ACCESS_TOKEN"])
+	Facebook::Messenger::Subscriptions.subscribe(access_token: ENV["FB_ACCESS_TOKEN"],
+		subscribed_fields: %w[messages feed mention name messaging_postbacks])
 	greeting_response 		 =HTTParty.post(FB_PAGE,  headers: HEADER, body: GREETING.to_json )
 	get_started_response	 =HTTParty.post(FB_PAGE,  headers: HEADER, body: GET_STARTED.to_json)
 	persistent_menu_response =HTTParty.post(FB_PAGE, headers: HEADER, body: PERSISTENT_MENU.to_json)

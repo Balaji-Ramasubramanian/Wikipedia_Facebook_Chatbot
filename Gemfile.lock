@@ -16,7 +16,7 @@ GEM
     chronic (0.10.2)
     concurrent-ruby (1.0.5)
     dotenv (2.5.0)
-    facebook-messenger (1.1.1)
+    facebook-messenger (1.4.1)
       httparty (~> 0.13, >= 0.13.7)
       rack (>= 1.4.5)
     httparty (0.15.7)
@@ -31,7 +31,7 @@ GEM
     mysql2 (0.5.2)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    rack (2.0.5)
+    rack (2.0.7)
     rack-protection (2.0.3)
       rack
     rake (12.3.1)
