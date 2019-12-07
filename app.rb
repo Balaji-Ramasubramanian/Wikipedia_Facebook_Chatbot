@@ -10,5 +10,9 @@ end
 
 # Show text in the browser
 get "/" do
-  "This is the home page for wikipedia facebook chatbot!"
+	erb :home
+end
+
+get "/privacypolicy" do
+	erb :privacypolicy
 end
