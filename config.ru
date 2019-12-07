@@ -10,3 +10,13 @@ run Sinatra::Application
 map("/webhook") do
   run Facebook::Messenger::Server
 end
+
+# Show home page text in the browser
+get "/" do
+	erb :home
+end
+
+# Show the privacy policy of the bot
+get "/privacypolicy" do
+	erb :privacypolicy
+end
