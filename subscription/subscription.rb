@@ -21,11 +21,12 @@ class SubscriptionClass
     end
     user.facebook_userid = id
     profile_details = MessengerBot.get_profile(id)
-    user.locale = profile_details["locale"]
+    user.locale = (profile_details["locale"] == nil)? "en" : profile_details["locale"]
     user.featured_article_subscription = true
     user.image_of_the_day_subscription = true
     user.on_this_day_subscription = true
     user.news_subscription = true
+    puts "Saving user profile on DB : " + user
     user.save
   end
 

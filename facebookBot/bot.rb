@@ -30,6 +30,7 @@ class MessengerBot
  		@profile_pic = profile_details["profile_pic"]
  		@locale = profile_details["locale"]
  		@gender = profile_details["gender"]
+ 		puts "Profile details : "+ profile_details
  		return profile_details
  	end
 
@@ -41,8 +42,8 @@ class MessengerBot
  		fb_profile_url = FB_PROFILE + id + FB_PROFILE_FIELDS
  		profile_details = HTTParty.get(fb_profile_url)
  		locale = profile_details["locale"]
- 		language = "en" if locale == nil 
- 		language = locale[0,2] unless locale == nil 
+ 		language = (locale == nil)? "en" : locale[0,2]
+ 		puts "Language : "+language
  		return language
  	end
 
@@ -131,6 +132,7 @@ class MessengerBot
 		language = get_language(id)
 		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		wit_response = Wit.new.get_intent(message,language)
+		puts "Wit response : " + wit_response
 		if wit_response.class == String then
 			handle_postback(id,wit_response)
 		elsif wit_response["GET_PAGE"] != nil then
@@ -193,6 +195,7 @@ class MessengerBot
 
 	# Triggers whenever the bot gets any messages.
 	Bot.on :message do |message|
+		puts "Received a message: " + message.text
 		id = message.sender["id"]
 		typing_on(id)
 		handle_message(id,message.text)
@@ -200,6 +203,7 @@ class MessengerBot
 
 	# Triggers whenever the bot gets any postbacks.
 	Bot.on :postback do |postback|
+		puts "Received a postback : " + postback.payload
 		id = postback.sender["id"]
 		handle_postback(id,postback.payload)
 	end
