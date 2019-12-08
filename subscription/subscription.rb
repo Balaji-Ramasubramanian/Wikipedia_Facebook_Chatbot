@@ -26,7 +26,7 @@ class SubscriptionClass
     user.image_of_the_day_subscription = true
     user.on_this_day_subscription = true
     user.news_subscription = true
-    puts "Saving user profile on DB : " + user
+    puts "Saving user profile on DB : \nuser locale : " + user.locale "\nuser id : "+ user.id +"\nuser facebook_userid : " + user.facebook_userid
     user.save
   end
 

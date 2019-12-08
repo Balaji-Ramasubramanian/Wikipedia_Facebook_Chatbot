@@ -30,7 +30,7 @@ class MessengerBot
  		@profile_pic = profile_details["profile_pic"]
  		@locale = profile_details["locale"]
  		@gender = profile_details["gender"]
- 		puts "Profile details : "+ profile_details
+ 		puts "Profile details : \nlocale : "+@locale +"\ngender : "+@gender
  		return profile_details
  	end
 
@@ -132,7 +132,7 @@ class MessengerBot
 		language = get_language(id)
 		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		wit_response = Wit.new.get_intent(message,language)
-		puts "Wit response : " + wit_response
+		puts "Wit response : " + wit_response.to_s
 		if wit_response.class == String then
 			handle_postback(id,wit_response)
 		elsif wit_response["GET_PAGE"] != nil then
