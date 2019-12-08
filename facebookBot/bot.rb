@@ -41,7 +41,8 @@ class MessengerBot
  		fb_profile_url = FB_PROFILE + id + FB_PROFILE_FIELDS
  		profile_details = HTTParty.get(fb_profile_url)
  		locale = profile_details["locale"]
- 		language = locale[0,2]
+ 		language = "en" if locale == nil 
+ 		language = locale[0,2] unless locale == nil 
  		return language
  	end
 
