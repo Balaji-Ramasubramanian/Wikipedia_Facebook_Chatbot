@@ -47,6 +47,11 @@ class MessengerBot
  		return language
  	end
 
+ 	def self.set_language_value(id)
+		@language = get_language(id)
+		@language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
+ 	end
+
  	# @param recipient_id [Integer] The receiver's Facebook user ID.
  	# @param text [String] The text content that has to be sent to the user.
  	# @return [nil].
@@ -101,25 +106,28 @@ class MessengerBot
 		rescue   
 			message = "hi"
 		end
-		@language = get_language(id)
-		@language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
-		WikipediaRestClient.set_language(@language)
-		
-		case message
-		when MOST_READ_MESSAGE["#{@language}"].downcase
-			handle_postback(id,"MOST_READ")
-		when RANDOM_ARTICLE_MESSAGE["#{@language}"].downcase
-			handle_postback(id,"RANDOM_ARTICLE")
-		when FEATURED_ARTICLE_MESSAGE["#{@language}"].downcase
-			handle_postback(id, "FEATURED_ARTICLE")
-		when IMAGE_OF_THE_DAY_MESSAGE["#{@language}"].downcase
-			handle_postback(id, "IMAGE_OF_THE_DAY")
-		when ON_THIS_DAY_MESSAGE["#{@language}"].downcase
-			handle_postback(id,"ON_THIS_DAY")
-		when NEWS_MESSAGE["#{@language}"].downcase
-			handle_postback(id,"NEWS")
-		else
-			handle_wit_response(id,message)
+		# @language = get_language(id)
+		# @language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
+		#WikipediaRestClient.set_language(@language)
+		begin
+			case message
+			when MOST_READ_MESSAGE["#{@language}"].downcase
+				handle_postback(id,"MOST_READ")
+			when RANDOM_ARTICLE_MESSAGE["#{@language}"].downcase
+				handle_postback(id,"RANDOM_ARTICLE")
+			when FEATURED_ARTICLE_MESSAGE["#{@language}"].downcase
+				handle_postback(id, "FEATURED_ARTICLE")
+			when IMAGE_OF_THE_DAY_MESSAGE["#{@language}"].downcase
+				handle_postback(id, "IMAGE_OF_THE_DAY")
+			when ON_THIS_DAY_MESSAGE["#{@language}"].downcase
+				handle_postback(id,"ON_THIS_DAY")
+			when NEWS_MESSAGE["#{@language}"].downcase
+				handle_postback(id,"NEWS")
+			else
+				handle_wit_response(id,message)
+			end
+		rescue
+			say(id,UNABLE_TO_GET_THE_CONTENT["#{{@language}}"])
 		end
 	end
 
@@ -129,9 +137,7 @@ class MessengerBot
 	# Uses Wit.ai to find the intent of the message
 	#
 	def self.handle_wit_response(id,message)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		wit_response = Wit.new.get_intent(message,language)
+		wit_response = Wit.new.get_intent(message,@language)
 		puts "Wit response : " + wit_response.to_s
 		if wit_response.class == String then
 			handle_postback(id,wit_response)
@@ -150,37 +156,40 @@ class MessengerBot
 	#
 	def self.handle_postback(id,postback_payload)
 		typing_on(id)
-		@language = get_language(id)
-		@language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
-		WikipediaRestClient.set_language(@language)
-
-		case postback_payload
-		when "GET_STARTED"
-			greeting_message = GREETING_MESSAGE["#{@language}"]
-			SubscriptionClass.new.save_user_profile(id)
-			say(id,greeting_message)
-			send_quick_reply(id)
-		when "RANDOM_ARTICLE"
-			get_random(id)
-		when "FEATURED_ARTICLE"
-			get_today_featured_article(id)
-		when "IMAGE_OF_THE_DAY"
-			get_image_of_the_day(id)
-		when "NEWS"
-			get_news(id)
-		when "MOST_READ"
-			get_most_read(id)
-		when "ON_THIS_DAY"
-			get_on_this_day(id)
-		when "HELP"
-			send_quick_reply(id)
-		when "SUBSCRIPTION"
-			SubscriptionClass.new.show_subscriptions(id)
-		when "HI"
-			say(id,GREETING_MESSAGE["#{@language}"])
-			send_quick_reply(id)
-		else
-			handle_get_summary_postbacks(id,postback_payload)
+		# @language = get_language(id)
+		# @language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
+		#WikipediaRestClient.set_language(@language)
+		begin
+			case postback_payload
+			when "GET_STARTED"
+				greeting_message = GREETING_MESSAGE["#{@language}"]
+				SubscriptionClass.new.save_user_profile(id)
+				say(id,greeting_message)
+				send_quick_reply(id)
+			when "RANDOM_ARTICLE"
+				get_random(id)
+			when "FEATURED_ARTICLE"
+				get_today_featured_article(id)
+			when "IMAGE_OF_THE_DAY"
+				get_image_of_the_day(id)
+			when "NEWS"
+				get_news(id)
+			when "MOST_READ"
+				get_most_read(id)
+			when "ON_THIS_DAY"
+				get_on_this_day(id)
+			when "HELP"
+				send_quick_reply(id)
+			when "SUBSCRIPTION"
+				SubscriptionClass.new.show_subscriptions(id)
+			when "HI"
+				say(id,GREETING_MESSAGE["#{@language}"])
+				send_quick_reply(id)
+			else
+				handle_get_summary_postbacks(id,postback_payload)
+			end
+		rescue
+			say(id,UNABLE_TO_GET_THE_CONTENT["#{{@language}}"])
 		end
 	end
 
@@ -198,6 +207,7 @@ class MessengerBot
 		puts "Received a message: " + message.text
 		id = message.sender["id"]
 		typing_on(id)
+		set_language_value(id)
 		handle_message(id,message.text)
 	end
 
@@ -205,6 +215,7 @@ class MessengerBot
 	Bot.on :postback do |postback|
 		puts "Received a postback : " + postback.payload
 		id = postback.sender["id"]
+		set_language_value(id)
 		handle_postback(id,postback.payload)
 	end
 

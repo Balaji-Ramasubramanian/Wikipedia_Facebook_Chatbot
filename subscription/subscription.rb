@@ -26,7 +26,7 @@ class SubscriptionClass
     user.image_of_the_day_subscription = true
     user.on_this_day_subscription = true
     user.news_subscription = true
-    puts "Saving user profile on DB : \nuser locale : " + user.locale "\nuser id : "+ user.id +"\nuser facebook_userid : " + user.facebook_userid
+    puts "Saving user profile on DB : \nuser locale : " + user.locale.to_s
     user.save
   end
 
@@ -100,7 +100,7 @@ class SubscriptionClass
     language = MessengerBot.get_language(id)
     language = "en" unless MessengerBot::SUPPORTED_LANGUAGE.include?(language)
     user = User.find_by_facebook_userid(id)
-    puts "inside subscribe #{category}"
+    puts "Subscribing #{category}"
     case category
     when "FEATURED_ARTICLE"
       user.update_attributes( :featured_article_subscription => true)
@@ -126,7 +126,7 @@ class SubscriptionClass
     language = MessengerBot.get_language(id)
     language = "en" unless MessengerBot::SUPPORTED_LANGUAGE.include?(language)
     user = User.find_by_facebook_userid(id)
-    puts "inside unsubscribe #{category}"
+    puts "Unsubscribing #{category}"
     case category
     when "FEATURED_ARTICLE"
       user.update_attributes( :featured_article_subscription => false)

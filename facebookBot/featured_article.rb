@@ -20,9 +20,9 @@ class MessengerBot
 	# This method is used to get featured article of the day content from Wikipedia
 	#
 	def self.get_today_featured_article(id)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		WikipediaRestClient.set_language(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		WikipediaRestClient.set_language(@language)
 		begin
 			today_featured_article = WikipediaRestClient.get_featured_article
 			title = today_featured_article.title
@@ -52,7 +52,7 @@ class MessengerBot
             "buttons":[
             	{
               		"type": "web_url",
-              		"title": READ_MORE_BUTTON["#{language}"],
+              		"title": READ_MORE_BUTTON["#{@language}"],
               		"url": url
             	}
         	]      
@@ -65,9 +65,9 @@ class MessengerBot
 	# It is used to fetch 'Image of the day' from Wikipedia and post it to the user's Messenger chat.
 	#
 	def self.get_image_of_the_day(id)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		WikipediaRestClient.set_language(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		WikipediaRestClient.set_language(@language)
 		begin
 			image = WikipediaRestClient.get_image_of_the_day
 			title = image.title
@@ -95,7 +95,7 @@ class MessengerBot
             "buttons":[
             	{
               		"type": "web_url",
-              		"title": VIEW_ON_BROWSER_BUTTON["#{language}"],
+              		"title": VIEW_ON_BROWSER_BUTTON["#{@language}"],
               		"url": image_commons_page
             	}
         	]      
@@ -108,9 +108,9 @@ class MessengerBot
 	# The method used to fetch 'On this day' contents from Wikipedia.
 	#
 	def self.get_on_this_day(id)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		WikipediaRestClient.set_language(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		WikipediaRestClient.set_language(@language)
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
 			on_this_day_content = WikipediaRestClient.get_on_this_day
@@ -131,7 +131,7 @@ class MessengerBot
 		            "buttons":[
 		            	{
 		              		"type": "postback",
-		              		"title": GET_SUMMARY_BUTTON["#{language}"],
+		              		"title": GET_SUMMARY_BUTTON["#{@language}"],
 		              		"payload": "GET_ON_THIS_DAY_SUMMARY_#{i}_#{date}"  # Add date value with the payload
 		            	}
 		            ]
@@ -147,9 +147,9 @@ class MessengerBot
 	# This method used to get the most_read contents of Wikipedia.
 	#
 	def self.get_most_read(id)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		WikipediaRestClient.set_language(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		WikipediaRestClient.set_language(@language)
 		begin
 			most_read = WikipediaRestClient.get_most_read
 			raise 'NilClassException' if most_read == nil
@@ -189,7 +189,7 @@ class MessengerBot
 			template[:attachment][:payload][:elements] = elements
 			post_template(id,template)
 		else
-			say(id, NO_MOST_READ_CONTENT_MESSAGE["#{language}"])
+			say(id, NO_MOST_READ_CONTENT_MESSAGE["#{@language}"])
 		end
 	end
 
@@ -198,9 +198,9 @@ class MessengerBot
 	# This method used to get news contents and post it to user's Messenger chat.
 	#
 	def self.get_news(id)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		WikipediaRestClient.set_language(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		WikipediaRestClient.set_language(@language)
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
 			news = WikipediaRestClient.get_news
@@ -220,7 +220,7 @@ class MessengerBot
 		            "buttons":[
 		            	{
 		              		"type": "postback",
-		              		"title": GET_SUMMARY_BUTTON["#{language}"],
+		              		"title": GET_SUMMARY_BUTTON["#{@language}"],
 		              		"payload": "GET_NEWS_SUMMARY_#{i}_#{date}"  # Add date value with the payload
 		            	}
 		            ]
@@ -251,9 +251,9 @@ class MessengerBot
 	# This method gets on_this_day contents.
 	#
 	def self.get_on_this_day_summary(id,date)
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
-		WikipediaRestClient.set_language(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		WikipediaRestClient.set_language(@language)
 		WikipediaRestClient.get_on_this_day(date)
 		begin
 			on_this_day_content = WikipediaRestClient.get_on_this_day(date)
@@ -270,8 +270,8 @@ class MessengerBot
 	# This method gets news content summaries from Wikipedia.
 	#
 	def self.get_news_summary(id)
-		language = get_language(id)
-		WikipediaRestClient.set_language(language)
+		@language = get_language(id)
+		WikipediaRestClient.set_language(@language)
 		begin
 			news = WikipediaRestClient.get_news
 			raise 'NilClassException' if news == nil
@@ -289,8 +289,8 @@ class MessengerBot
 	#
 	def self.handle_get_summary_postbacks(id,postback)
 
-		language = get_language(id)
-		language = "en" unless SUPPORTED_LANGUAGE.include?(language)
+		# language = get_language(id)
+		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		if postback.include? "GET_ON_THIS_DAY_SUMMARY"
 			date = postback.split("_")[6] # splits the postback payload and get the date from it.
 			i = postback.split("_")[5].to_i
@@ -308,7 +308,7 @@ class MessengerBot
 				news_contents = get_news_summary(id)
 				news_summary = news_contents[i]["story"]
 			else
-				news_summary = CANT_LOAD_OLD_NEWS_MESSAGE["#{language}"]
+				news_summary = CANT_LOAD_OLD_NEWS_MESSAGE["#{@language}"]
 			end
 		end
 
@@ -326,7 +326,7 @@ class MessengerBot
 				category = postback.gsub("SUBSCRIBE_","")
 				SubscriptionClass.new.subscribe(id,category)
 			else
-				say(id, CANT_UNDERSTAND_MESSAGE["#{language}"])
+				say(id, CANT_UNDERSTAND_MESSAGE["#{@language}"])
 			end	
 		end
 	end

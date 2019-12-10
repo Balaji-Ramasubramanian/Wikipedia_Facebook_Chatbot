@@ -166,4 +166,9 @@ class MessengerBot
  		"ta" => "இந்த நாளில் உள்ளடக்கங்கள்!"
  	}
 
+ 	UNABLE_TO_GET_THE_CONTENT = {
+ 		"en" => "Sorry, I'm unable to get the content right now! Please try again later",
+ 		"ta" => "மன்னிக்கவும், என்னால் இப்போது உள்ளடக்கத்தைப் பெற முடியவில்லை! பின்னர் மீண்டும் முயற்சிக்கவும்"
+ 	}
+
 end
