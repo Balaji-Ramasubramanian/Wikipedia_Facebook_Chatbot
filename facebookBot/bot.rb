@@ -127,7 +127,7 @@ class MessengerBot
 				handle_wit_response(id,message)
 			end
 		rescue
-			say(id,UNABLE_TO_GET_THE_CONTENT["#{{@language}}"])
+			say(id,UNABLE_TO_GET_THE_CONTENT["#{@language}"])
 		end
 	end
 
@@ -189,7 +189,7 @@ class MessengerBot
 				handle_get_summary_postbacks(id,postback_payload)
 			end
 		rescue
-			say(id,UNABLE_TO_GET_THE_CONTENT["#{{@language}}"])
+			say(id,UNABLE_TO_GET_THE_CONTENT["#{@language}"])
 		end
 	end
 

@@ -15,19 +15,25 @@ class SubscriptionClass
   # To save user subscription information in the database table.
   #
   def save_user_profile(id)
+    puts "Started save_user_profile "
     user = User.find_by_facebook_userid(id)
     if user == nil then
       user = User.new 
     end
     user.facebook_userid = id
-    profile_details = MessengerBot.get_profile(id)
-    user.locale = (profile_details["locale"] == nil)? "en" : profile_details["locale"]
+    begin
+      profile_details = MessengerBot.get_profile(id)
+      user.locale = (profile_details["locale"] == nil)? "en" : profile_details["locale"]
+    rescue
+      # Setting en as default locale value of the user
+      user.locale = "en"
+    end
     user.featured_article_subscription = true
     user.image_of_the_day_subscription = true
     user.on_this_day_subscription = true
     user.news_subscription = true
-    puts "Saving user profile on DB : \nuser locale : " + user.locale.to_s
     user.save
+    puts "User subscription info saved"
   end
 
   # @param id [Integer] The receiver's Facebook user ID.
@@ -87,7 +93,11 @@ class SubscriptionClass
         message_option[:message][:attachment][:payload][:elements][3][:buttons][0][:payload] = "UNSUBSCRIBE_ON_THIS_DAY"
       end
       res = HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_option.to_json)
-
+    else
+      # Registering the user
+      puts "User row not found in DB.\nInserting new user row..."
+      SubscriptionClass.new.save_user_profile(id)
+      show_subscriptions(id)
     end
   end
 
