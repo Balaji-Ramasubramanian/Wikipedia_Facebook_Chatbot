@@ -106,9 +106,6 @@ class MessengerBot
 		rescue   
 			message = "hi"
 		end
-		# @language = get_language(id)
-		# @language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
-		#WikipediaRestClient.set_language(@language)
 		begin
 			case message
 			when MOST_READ_MESSAGE["#{@language}"].downcase
@@ -156,9 +153,6 @@ class MessengerBot
 	#
 	def self.handle_postback(id,postback_payload)
 		typing_on(id)
-		# @language = get_language(id)
-		# @language = "en" unless SUPPORTED_LANGUAGE.include?(@language)
-		#WikipediaRestClient.set_language(@language)
 		begin
 			case postback_payload
 			when "GET_STARTED"

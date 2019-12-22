@@ -20,8 +20,6 @@ class MessengerBot
 	# This method is used to get featured article of the day content from Wikipedia
 	#
 	def self.get_today_featured_article(id)
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(@language)
 		begin
 			today_featured_article = WikipediaRestClient.get_featured_article
@@ -65,8 +63,6 @@ class MessengerBot
 	# It is used to fetch 'Image of the day' from Wikipedia and post it to the user's Messenger chat.
 	#
 	def self.get_image_of_the_day(id)
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(@language)
 		begin
 			image = WikipediaRestClient.get_image_of_the_day
@@ -108,8 +104,6 @@ class MessengerBot
 	# The method used to fetch 'On this day' contents from Wikipedia.
 	#
 	def self.get_on_this_day(id)
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(@language)
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
@@ -147,8 +141,6 @@ class MessengerBot
 	# This method used to get the most_read contents of Wikipedia.
 	#
 	def self.get_most_read(id)
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(@language)
 		begin
 			most_read = WikipediaRestClient.get_most_read
@@ -198,8 +190,6 @@ class MessengerBot
 	# This method used to get news contents and post it to user's Messenger chat.
 	#
 	def self.get_news(id)
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(@language)
 		date = Time.now.strftime("%Y/%m/%d")
 		begin
@@ -251,8 +241,6 @@ class MessengerBot
 	# This method gets on_this_day contents.
 	#
 	def self.get_on_this_day_summary(id,date)
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		WikipediaRestClient.set_language(@language)
 		WikipediaRestClient.get_on_this_day(date)
 		begin
@@ -288,9 +276,6 @@ class MessengerBot
 	# This method handles postbacks for GET_SUMMARY button from on_this_day and news contents. It also handles subscribe and unsubscribe payloads.
 	#
 	def self.handle_get_summary_postbacks(id,postback)
-
-		# language = get_language(id)
-		# language = "en" unless SUPPORTED_LANGUAGE.include?(language)
 		if postback.include? "GET_ON_THIS_DAY_SUMMARY"
 			date = postback.split("_")[6] # splits the postback payload and get the date from it.
 			i = postback.split("_")[5].to_i

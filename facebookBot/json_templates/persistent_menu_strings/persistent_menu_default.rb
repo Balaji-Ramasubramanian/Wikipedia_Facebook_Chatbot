@@ -33,11 +33,12 @@ class MessengerBot
                 "type": "postback",
                 "payload": "NEWS"
               },
-              {
-                "title": MOST_READ_MESSAGE["en"],
-                "type": "postback",
-                "payload": "MOST_READ"
-              },
+              # TODO fix most read content not present in the api result and uncomment the below
+              # {
+              #   "title": MOST_READ_MESSAGE["en"],
+              #   "type": "postback",
+              #   "payload": "MOST_READ"
+              # },
               {
                 "title": ON_THIS_DAY_MESSAGE["en"],
                 "type": "postback",
