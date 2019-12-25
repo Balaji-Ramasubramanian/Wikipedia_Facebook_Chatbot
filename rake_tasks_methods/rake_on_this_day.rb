@@ -13,13 +13,13 @@ class RakeTaskClass
 	# This method used to send On this day contents to subscribed users.
 	#
 	def send_on_this_day(language)
-		puts "On this day contents..."
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND on_this_day_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_on_this_day("#{language}")
-			subscribed_users.each do |users|
-				MessengerBot.say(users.facebook_userid,MessengerBot::CHECKOUT_ON_THIS_DAY["#{language}"])
-				MessengerBot.post_template(users.facebook_userid,article)
+			subscribed_users.each do |user|
+				puts "On this day contents to user_id = " + user.facebook_userid.to_s
+				MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_ON_THIS_DAY["#{language}"])
+				MessengerBot.post_template(user.facebook_userid,article)
 			end
 		end
 	end

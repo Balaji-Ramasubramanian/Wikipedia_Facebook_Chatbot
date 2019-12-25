@@ -13,13 +13,13 @@ class RakeTaskClass
 	# This method used to send Image of the day to subscribed users.
 	#
 	def send_image_of_the_day(language)
-		puts "Sending image of the day..."
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND image_of_the_day_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_image_of_the_day("#{language}")
-			subscribed_users.each do |users|
-				MessengerBot.say(users.facebook_userid,MessengerBot::CHECKOUT_IMAGE_OF_THE_DAY["#{language}"])
-				MessengerBot.post_template(users.facebook_userid,article)
+			subscribed_users.each do |user|
+				puts "Sending image of the day to user_id =  " + user.facebook_userid.to_s
+				MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_IMAGE_OF_THE_DAY["#{language}"])
+				MessengerBot.post_template(user.facebook_userid,article)
 			end
 		end
 	end

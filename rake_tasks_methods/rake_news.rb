@@ -13,14 +13,14 @@ class RakeTaskClass
 	# This method is used to send the news contents to the corresponding subscribed users.
 	#
 	def send_news(language)
-		puts "Sending news..."
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND news_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_news("#{language}")
 			if article != nil then
-				subscribed_users.each do |users|
-					MessengerBot.say(users.facebook_userid,MessengerBot::CHECKOUT_NEWS["#{language}"])
-					MessengerBot.post_template(users.facebook_userid,article)
+				subscribed_users.each do |user|
+					puts "Sending news to user_id = " + user.facebook_userid.to_s
+					MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_NEWS["#{language}"])
+					MessengerBot.post_template(user.facebook_userid,article)
 				end
 			end
 		end

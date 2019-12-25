@@ -13,13 +13,13 @@ class RakeTaskClass
 	# This method used to send Featured article to subscribed users
 	#
 	def send_featured_article(language)
-		puts "Sending featured articles..."
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND featured_article_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_featured_article("#{language}")
-			subscribed_users.each do |users|
-				MessengerBot.say(users.facebook_userid,MessengerBot::CHECKOUT_FEATURED_ARTICLE["#{language}"])
-				MessengerBot.post_template(users.facebook_userid,article)
+			subscribed_users.each do |user|
+				puts "Sending featured articles to userid = " + user.facebook_userid.to_s
+				MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_FEATURED_ARTICLE["#{language}"])
+				MessengerBot.post_template(user.facebook_userid,article)
 			end
 		end
 	end
