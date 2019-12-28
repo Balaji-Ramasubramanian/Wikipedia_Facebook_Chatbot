@@ -19,7 +19,7 @@ class RakeTaskClass
 			subscribed_users.each do |user|
 				puts "Sending featured articles to userid = " + user.facebook_userid.to_s
 				MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_FEATURED_ARTICLE["#{language}"])
-				MessengerBot.post_template(user.facebook_userid,article)
+				MessengerBot.post_scheduled_posts(user.facebook_userid,article)
 			end
 		end
 	end
