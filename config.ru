@@ -20,3 +20,8 @@ end
 get "/privacypolicy" do
 	erb :privacypolicy
 end
+
+#verify Facebook business domain
+get "/883ljzyr0bbwf46vznjquq0b5hmdvj.html" do
+	erb :facebookbusinessverify
+end
