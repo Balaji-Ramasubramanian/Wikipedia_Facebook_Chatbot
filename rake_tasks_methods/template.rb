@@ -32,7 +32,7 @@ class RakeTaskClass
       "recipient": { "id": "#{id}"},
       "message": "#{template.to_json}",
       "messaging_type": "MESSAGE_TAG",
-      "tag": "NON_PROMOTIONAL_SUBSCRIPTION"
+      "tag": "CONFIRMED_EVENT_UPDATE"
       }
     res = HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_options.to_json)
   end
