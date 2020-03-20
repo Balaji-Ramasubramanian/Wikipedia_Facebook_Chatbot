@@ -13,6 +13,7 @@ class RakeTaskClass
 	# This method used to send Image of the day to subscribed users.
 	#
 	def send_image_of_the_day(language)
+		puts "Current Time : "+Time.new.inspect + "Language : #{language}"
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND image_of_the_day_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_image_of_the_day("#{language}")

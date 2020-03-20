@@ -13,6 +13,7 @@ class RakeTaskClass
 	# This method used to send On this day contents to subscribed users.
 	#
 	def send_on_this_day(language)
+		puts "Current Time : "+Time.new.inspect + "Language : #{language}"
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND on_this_day_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_on_this_day("#{language}")

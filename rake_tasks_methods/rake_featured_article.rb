@@ -13,6 +13,7 @@ class RakeTaskClass
 	# This method used to send Featured article to subscribed users
 	#
 	def send_featured_article(language)
+		puts "Current Time : "+Time.new.inspect + "Language : #{language}"
 		subscribed_users = User.select("facebook_userid").where("locale like ? AND featured_article_subscription = ?","#{language}%",true).to_a
 		if subscribed_users != nil then
 			article = RakeTaskClass.new.get_featured_article("#{language}")
