@@ -20,7 +20,7 @@ class RakeTaskClass
 			if article != nil then
 				subscribed_users.each do |user|
 					puts "Sending news to user_id = " + user.facebook_userid.to_s
-					MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_NEWS["#{language}"])
+					RakeTaskClass.post_scheduled_posts_text(user.facebook_userid,MessengerBot::CHECKOUT_NEWS["#{language}"])
 					RakeTaskClass.post_scheduled_posts(user.facebook_userid,article)
 				end
 			end

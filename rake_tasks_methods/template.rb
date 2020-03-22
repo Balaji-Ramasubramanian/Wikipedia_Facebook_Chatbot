@@ -37,4 +37,19 @@ class RakeTaskClass
     res = HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_options.to_json)
   end
   
+  # @param recipient_id [Integer] The receiver's Facebook user ID.
+  # @param text [String] The text content that has to be sent to the user.
+  # @return [nil].
+  # This method is used to post a text message to address the scheduled content.
+  #
+  def self.post_scheduled_posts_text(recipient_id, text)
+    message_options = {
+      messaging_type: "MESSAGE_TAG",
+      tag: "CONFIRMED_EVENT_UPDATE",
+      recipient: { id: recipient_id },
+      message: { text: text }
+    }
+    res = HTTParty.post(FB_MESSAGE, headers: HEADER, body: message_options.to_json)
+  end
+
 end

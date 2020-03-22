@@ -19,7 +19,7 @@ class RakeTaskClass
 			article = RakeTaskClass.new.get_on_this_day("#{language}")
 			subscribed_users.each do |user|
 				puts "On this day contents to user_id = " + user.facebook_userid.to_s
-				MessengerBot.say(user.facebook_userid,MessengerBot::CHECKOUT_ON_THIS_DAY["#{language}"])
+				RakeTaskClass.post_scheduled_posts_text(user.facebook_userid,MessengerBot::CHECKOUT_ON_THIS_DAY["#{language}"])
 				RakeTaskClass.post_scheduled_posts(user.facebook_userid,article)
 			end
 		end
