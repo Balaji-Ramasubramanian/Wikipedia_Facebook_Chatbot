@@ -21,7 +21,7 @@ class MessengerBot
 			  	{
 			    	"content_type": 'text',
 			    	"title": QUICK_REPLY_OPTIONS["News"]["ta"],
-			    	"payload": 'IMAGE_OF_THE_DAY'
+			    	"payload": 'NEWS'
 			  	},
 			  	{
 			    	"content_type": 'text',
