@@ -18,11 +18,11 @@ class Wit
 			response = client.message(phrase)
 		end
 
-		if response["entities"]["intents"] != nil then
-			return response["entities"]["intents"][0]["value"]
+		if response["intents"] != nil && response["intents"] != [] then
+			return response["intents"][0]["name"]
 
-		elsif response["traits"] != nil then
-			if response["entities"]["GET_PAGE:GET_PAGE"] != nil then
+		elsif response["traits"] != nil && response["traits"] != {} then
+			if response["entities"]["GET_PAGE:GET_PAGE"] != nil && response["entities"]["GET_PAGE:GET_PAGE"] != [] then
 				if response["entities"]["GET_PAGE:GET_PAGE"][0]["confidence"] >=  response["traits"]["wit$greetings"][0]["confidence"] then
 					return response["entities"]
 				else
