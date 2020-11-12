@@ -18,12 +18,12 @@ class Wit
 			response = client.message(phrase)
 		end
 
-		if response["entities"]["intent"] != nil then
-			return response["entities"]["intent"][0]["value"]
+		if response["entities"]["intents"] != nil then
+			return response["entities"]["intents"][0]["value"]
 
-		elsif response["entities"]["greetings"] != nil then
-			if response["entities"]["GET_PAGE"] != nil then
-				if response["entities"]["GET_PAGE"][0]["confidence"] >=  response["entities"]["greetings"][0]["confidence"] then
+		elsif response["traits"] != nil then
+			if response["entities"]["GET_PAGE:GET_PAGE"] != nil then
+				if response["entities"]["GET_PAGE:GET_PAGE"][0]["confidence"] >=  response["traits"]["wit$greetings"][0]["confidence"] then
 					return response["entities"]
 				else
 					return "HI"
@@ -31,7 +31,7 @@ class Wit
 			end
 			return "HI"
 
-		elsif response["entities"]["GET_PAGE"] != nil then
+		elsif response["entities"]["GET_PAGE:GET_PAGE"] != nil then
 			return response["entities"]
 
 		else 

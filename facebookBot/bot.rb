@@ -138,8 +138,8 @@ class MessengerBot
 		puts "Wit response : " + wit_response.to_s
 		if wit_response.class == String then
 			handle_postback(id,wit_response)
-		elsif wit_response["GET_PAGE"] != nil then
-			page_name = wit_response["GET_PAGE"][0]["value"]
+		elsif wit_response["GET_PAGE:GET_PAGE"] != nil then
+			page_name = wit_response["GET_PAGE:GET_PAGE"][0]["value"]
 			get_page(id,page_name)
 		else
 			get_page(id,message)
