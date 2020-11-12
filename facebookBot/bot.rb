@@ -174,8 +174,8 @@ class MessengerBot
 				get_on_this_day(id)
 			when "HELP"
 				send_quick_reply(id)
-			when "SUBSCRIPTION"
-				SubscriptionClass.new.show_subscriptions(id)
+			# when "SUBSCRIPTION"
+			# 	SubscriptionClass.new.show_subscriptions(id)
 			when "HI"
 				say(id,GREETING_MESSAGE["#{@language}"])
 				send_quick_reply(id)

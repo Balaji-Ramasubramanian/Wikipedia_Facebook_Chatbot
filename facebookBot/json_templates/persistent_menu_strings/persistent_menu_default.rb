@@ -51,11 +51,12 @@ class MessengerBot
             "title": MORE_BUTTON["en"],
             "type": "nested",
             "call_to_actions": [
-              {
-                "title": SUBSCRIPTION_BUTTON["en"],
-                "type": "postback",
-                "payload": "SUBSCRIPTION"
-              },
+              # TODO Subscription messages not permitted by FB
+              # {
+              #   "title": SUBSCRIPTION_BUTTON["en"],
+              #   "type": "postback",
+              #   "payload": "SUBSCRIPTION"
+              # },
               {
                 "title": HELP_BUTTON["en"],
                 "type": "postback",

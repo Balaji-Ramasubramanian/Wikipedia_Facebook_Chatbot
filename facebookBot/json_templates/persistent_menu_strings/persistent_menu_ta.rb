@@ -51,11 +51,11 @@ class MessengerBot
             "title": MORE_BUTTON["ta"],
             "type": "nested",
             "call_to_actions": [
-              {
-                "title": SUBSCRIPTION_BUTTON["ta"],
-                "type": "postback",
-                "payload": "SUBSCRIPTION"
-              },
+              # {
+              #   "title": SUBSCRIPTION_BUTTON["ta"],
+              #   "type": "postback",
+              #   "payload": "SUBSCRIPTION"
+              # },
               {
                 "title": HELP_BUTTON["ta"],
                 "type": "postback",
